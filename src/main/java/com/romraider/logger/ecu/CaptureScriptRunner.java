@@ -112,8 +112,12 @@ final class CaptureScriptRunner implements Runnable {
                     "RomRaider scripted capture", JOptionPane.INFORMATION_MESSAGE);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+            stopAfterFailure(markers, captureStart, startedCapture, "INTERRUPTED");
+            startedCapture = false;
             reportFailure("Capture script was interrupted.", e);
         } catch (Exception e) {
+            stopAfterFailure(markers, captureStart, startedCapture, "ERROR");
+            startedCapture = false;
             reportFailure(e.getMessage(), e);
         } finally {
             if (startedCapture) {
@@ -137,6 +141,18 @@ final class CaptureScriptRunner implements Runnable {
                     LOGGER.error("Unable to stop logger after scripted capture.", e);
                 }
             }
+        }
+    }
+
+    private void stopAfterFailure(FileWriter markers, long captureStart,
+            boolean captureStarted, String event) {
+        if (!captureStarted) return;
+        try {
+            long now = System.currentTimeMillis();
+            if (markers != null) writeMarker(markers, captureStart, now, event, "", "Capture stopped after an error.");
+            logger.stopScriptedFileCapture();
+        } catch (Exception e) {
+            LOGGER.error("Unable to stop capture after a script failure.", e);
         }
     }
 
