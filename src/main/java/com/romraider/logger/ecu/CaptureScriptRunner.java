@@ -65,13 +65,14 @@ final class CaptureScriptRunner implements Runnable {
                 startedLogger = true;
             }
             waitForExpectedEcu(plan);
+            final Set<String> requestedChannels = plan.channelIds;
             runOnEdt(new Runnable() {
                 @Override
                 public void run() {
-                    // Flush the EDT queue first so the ECU-specific logger rows are loaded.
+                    // This also flushes earlier ECU-specific logger-row updates on the EDT.
+                    logger.selectCaptureChannels(requestedChannels);
                 }
             });
-            logger.selectCaptureChannels(plan.channelIds);
 
             File outputDirectory = new File(SettingsManager.getSettings().getLoggerOutputDirPath());
             if (!outputDirectory.isDirectory()) {
@@ -105,6 +106,8 @@ final class CaptureScriptRunner implements Runnable {
                 writeMarker(markers, captureStart, System.currentTimeMillis(), "STEP_END", step.id, "");
             }
             writeMarker(markers, captureStart, System.currentTimeMillis(), "CAPTURE_END", "", "");
+            logger.stopScriptedFileCapture();
+            startedCapture = false;
             showMessage("Scripted capture finished. Marker file: " + markerFile,
                     "RomRaider scripted capture", JOptionPane.INFORMATION_MESSAGE);
         } catch (InterruptedException e) {
