@@ -312,6 +312,15 @@
         <macro_standalone os="${os.linux}" />
     </target>
 
+    <target name="rebuild-windows-x86" depends="clean, build-windows"
+        description="Rebuild only the 32-bit Windows application" />
+
+    <target name="standalone-windows-x86" depends="rebuild-windows-x86"
+        description="Create the 32-bit Windows standalone ZIP">
+        <mkdir dir="${dist.dir}/${os.windows}" />
+        <macro_standalone os="${os.windows}" />
+    </target>
+
     <!-- =================================================================== -->
     <!-- all                                                                 -->
     <!-- =================================================================== -->
@@ -416,6 +425,8 @@
             <zip destfile="${dist.dir}/@{os}/${name.package}${version.major}.${version.minor}.${version.patch}${version.extra}${version.extra1}-@{os}.zip">
                 <zipfileset file="build/@{os}/lib/${jar.package}" prefix="${name.package}" />
                 <zipfileset file="scripts/run.${ext.@{os}}" prefix="${name.package}" filemode="755" />
+                <zipfileset file="scripts/run_capture.bat" prefix="${name.package}" filemode="755" />
+                <zipfileset file="capture_scripts/ep5i400f_7007_native_switches.xml" prefix="${name.package}/capture_scripts" />
                 <zipfileset file="license.txt" prefix="${name.package}" />
                 <zipfileset file="release_notes.txt" prefix="${name.package}" />
                 <zipfileset file="lib/log4j.properties" prefix="${name.package}/lib"/>
