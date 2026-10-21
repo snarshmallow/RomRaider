@@ -283,7 +283,7 @@ public final class EcuLogger extends AbstractFrame implements MessageListener {
     private DynoUpdateHandler dynoUpdateHandler;
     private DataUpdateHandlerManager dynoHandlerManager;
     private DataRegistrationBroker dynoTabBroker;
-    private EcuInit ecuInit;
+    private volatile EcuInit ecuInit;
     private JToggleButton logToFileButton;
     private List<ExternalDataSource> externalDataSources;
     private List<EcuParameter> ecuParams;
@@ -1839,6 +1839,58 @@ public final class EcuLogger extends AbstractFrame implements MessageListener {
         return controller.isStarted();
     }
 
+    String getCurrentEcuId() {
+        return ecuInit == null ? null : ecuInit.getEcuId();
+    }
+
+    void selectCaptureChannels(java.util.Set<String> channelIds) {
+        if (!SwingUtilities.isEventDispatchThread()) {
+            throw new IllegalStateException("Capture channels must be selected on the Swing event thread.");
+        }
+        java.util.Set<String> found = new java.util.HashSet<String>();
+        selectCaptureChannels(dataTabParamListTableModel, channelIds, found);
+        selectCaptureChannels(dataTabSwitchListTableModel, channelIds, found);
+        java.util.Set<String> missing = new java.util.HashSet<String>(channelIds);
+        missing.removeAll(found);
+        if (!missing.isEmpty()) {
+            throw new IllegalArgumentException("Capture script channels are not defined for the connected ECU: " + missing);
+        }
+    }
+
+    private void selectCaptureChannels(ParameterListTableModel model,
+            java.util.Set<String> channelIds, java.util.Set<String> found) {
+        for (ParameterRow row : model.getParameterRows()) {
+            com.romraider.logger.ecu.definition.LoggerData data = row.getLoggerData();
+            boolean selected = channelIds.contains(data.getId());
+            if (selected) found.add(data.getId());
+            if (row.isSelected() != selected) model.selectParam(data, selected);
+        }
+    }
+
+    boolean isFileCaptureActive() {
+        return fileUpdateHandler.isStarted();
+    }
+
+    void startScriptedFileCapture(String name) {
+        if (!controller.isStarted()) {
+            throw new IllegalStateException("Connect to the ECU before starting a capture.");
+        }
+        if (fileUpdateHandler.isStarted()) {
+            throw new IllegalStateException("A file capture is already active.");
+        }
+        String previousName = getSettings().getLogfileNameText();
+        try {
+            getSettings().setLogfileNameText(name);
+            fileUpdateHandler.start();
+        } finally {
+            getSettings().setLogfileNameText(previousName);
+        }
+    }
+
+    void stopScriptedFileCapture() {
+        fileUpdateHandler.stop();
+    }
+
     public void startLogging() {
         controller.start();
     }
@@ -2113,6 +2165,28 @@ public final class EcuLogger extends AbstractFrame implements MessageListener {
         EcuLogger ecuLogger = getEcuLogger(ecuEditor);
         createAndShowGui(defaultCloseOperation, ecuLogger, fullscreen);
         if (ecuLogger.getSettings().getAutoConnectOnStartup() && !ecuLogger.isLogging()) ecuLogger.startLogging();
+        String captureScript = captureScriptPath(args);
+        if (captureScript != null) ecuLogger.startScriptedCapture(captureScript);
+    }
+
+    private static String captureScriptPath(String... args) {
+        if (args == null) return null;
+        for (int i = 0; i < args.length; i++) {
+            if (args[i] != null && args[i].startsWith("--capture-script=")) {
+                return args[i].substring("--capture-script=".length());
+            }
+            if ("--capture-script".equals(args[i]) && i + 1 < args.length) {
+                return args[i + 1];
+            }
+        }
+        return null;
+    }
+
+    public void startScriptedCapture(String scriptPath) {
+        Thread thread = new Thread(new CaptureScriptRunner(this, new File(scriptPath)),
+                "RomRaider Capture Script");
+        thread.setDaemon(true);
+        thread.start();
     }
 
     private static boolean containsFullScreenArg(String... args) {
