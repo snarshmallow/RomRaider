@@ -7,7 +7,7 @@
 :: RomRaider.
 :: If the path has spaces in it make sure it is within the quotes of java_path.
 :: End the path with a \ directory separator.
-set "java_path="
+set "java_path=%ProgramFiles(x86)%\Java\jdk1.6.0_45\bin\"
 
 :: Start Editor with console redirected to %HOMEPATH%\.RomRaider\romraider_sout.log
 start "Editor" /NORMAL "%java_path%javaw.exe" -Djava.library.path=lib/windows/32 -Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.d3d=true -Xms64M -Xmx512M -jar RomRaider.jar
