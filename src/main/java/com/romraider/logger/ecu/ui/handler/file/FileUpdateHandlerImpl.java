@@ -143,6 +143,11 @@ public final class FileUpdateHandlerImpl implements FileUpdateHandler, Convertor
         }
     }
 
+    @Override
+    public synchronized boolean isStarted() {
+        return fileLogger.isStarted();
+    }
+
     private void resetLine() {
         currentLine = new Line(loggerDatas.keySet());
     }
