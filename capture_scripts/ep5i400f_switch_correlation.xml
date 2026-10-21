@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capture-script name="EP5I400F_switch_correlation"
+                expected-ecu-id="8424387007"
+                connection-timeout-seconds="120">
+    <channels>
+        <channel id="Clutch Switch"/>
+        <channel id="Neutral Position Switch Signal"/>
+        <channel id="X943"/>
+        <channel id="X944"/>
+    </channels>
+    <steps>
+        <step id="baseline_neutral_clutch_up" seconds="8"
+              prompt="Stationary, parking brake set. Leave the transmission in neutral and the clutch released."/>
+        <step id="neutral_clutch_pressed" seconds="8"
+              prompt="Keep the car stationary and in neutral. Press the clutch fully and hold it."/>
+        <step id="first_gear_clutch_pressed" seconds="8"
+              prompt="With the clutch fully pressed and parking brake set, select first gear and hold."/>
+        <step id="back_to_neutral_clutch_pressed" seconds="8"
+              prompt="Keep the clutch fully pressed, return the transmission to neutral, and hold."/>
+        <step id="neutral_clutch_released" seconds="8"
+              prompt="Leave the transmission in neutral and release the clutch."/>
+    </steps>
+</capture-script>
