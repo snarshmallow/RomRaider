@@ -133,7 +133,12 @@ final class CaptureScriptRunner implements Runnable {
         } finally {
             if (startedCapture) {
                 try {
-                    logger.stopScriptedFileCapture();
+                    runOnEdt(new Runnable() {
+                        @Override
+                        public void run() {
+                            logger.stopScriptedFileCapture();
+                        }
+                    });
                 } catch (Exception e) {
                     LOGGER.error("Unable to stop scripted file capture.", e);
                 }
