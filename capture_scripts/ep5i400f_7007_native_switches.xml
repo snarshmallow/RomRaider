@@ -4,7 +4,7 @@
                 connection-timeout-seconds="120">
     <channels>
         <channel id="Clutch Switch"/>
-        <channel id="Neutral Position Switch Signal"/>
+        <channel id="Neutral Position Switch"/>
     </channels>
     <steps>
         <step id="neutral_clutch_released" seconds="8"
