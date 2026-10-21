@@ -29,4 +29,6 @@ public interface FileUpdateHandler extends DataUpdateHandler {
     void start();
 
     void stop();
+
+    boolean isStarted();
 }
