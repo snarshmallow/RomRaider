@@ -87,7 +87,13 @@ final class CaptureScriptRunner implements Runnable {
                     + System.getProperty("line.separator"));
             markers.flush();
 
-            logger.startScriptedFileCapture(plan.name);
+            final String captureName = plan.name;
+            runOnEdt(new Runnable() {
+                @Override
+                public void run() {
+                    logger.startScriptedFileCapture(captureName);
+                }
+            });
             startedCapture = true;
             captureStart = System.currentTimeMillis();
             writeMarker(markers, captureStart, captureStart, "CAPTURE_START", "", plan.name);
@@ -106,7 +112,12 @@ final class CaptureScriptRunner implements Runnable {
                 writeMarker(markers, captureStart, System.currentTimeMillis(), "STEP_END", step.id, "");
             }
             writeMarker(markers, captureStart, System.currentTimeMillis(), "CAPTURE_END", "", "");
-            logger.stopScriptedFileCapture();
+            runOnEdt(new Runnable() {
+                @Override
+                public void run() {
+                    logger.stopScriptedFileCapture();
+                }
+            });
             startedCapture = false;
             showMessage("Scripted capture finished. Marker file: " + markerFile,
                     "RomRaider scripted capture", JOptionPane.INFORMATION_MESSAGE);
@@ -150,7 +161,12 @@ final class CaptureScriptRunner implements Runnable {
         try {
             long now = System.currentTimeMillis();
             if (markers != null) writeMarker(markers, captureStart, now, event, "", "Capture stopped after an error.");
-            logger.stopScriptedFileCapture();
+            runOnEdt(new Runnable() {
+                @Override
+                public void run() {
+                    logger.stopScriptedFileCapture();
+                }
+            });
         } catch (Exception e) {
             LOGGER.error("Unable to stop capture after a script failure.", e);
         }
