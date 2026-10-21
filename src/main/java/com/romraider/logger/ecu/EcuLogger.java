@@ -1844,7 +1844,7 @@ public final class EcuLogger extends AbstractFrame implements MessageListener {
     }
 
     void selectCaptureChannels(java.util.Set<String> channelIds) {
-        if (!SwingUtilities.isEventDispatchThread()) {
+        if (!javax.swing.SwingUtilities.isEventDispatchThread()) {
             throw new IllegalStateException("Capture channels must be selected on the Swing event thread.");
         }
         java.util.Set<String> found = new java.util.HashSet<String>();
