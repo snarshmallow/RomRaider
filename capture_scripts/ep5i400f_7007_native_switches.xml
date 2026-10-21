@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capture-script name="EP5I400F_7007_native_switches"
+                expected-ecu-id="8424387007"
+                connection-timeout-seconds="120">
+    <channels>
+        <channel id="Clutch Switch"/>
+        <channel id="Neutral Position Switch Signal"/>
+    </channels>
+    <steps>
+        <step id="neutral_clutch_released" seconds="8"
+              prompt="Keep the vehicle stationary, ignition on, and transmission in neutral. Leave the clutch released."/>
+        <step id="neutral_clutch_pressed" seconds="8"
+              prompt="Keep the vehicle stationary and in neutral. Press the clutch fully and hold it."/>
+        <step id="first_gear_clutch_pressed" seconds="8"
+              prompt="With the clutch fully pressed, select first gear and hold. Keep the vehicle stationary."/>
+        <step id="neutral_clutch_pressed_again" seconds="8"
+              prompt="Keep the clutch fully pressed and return the transmission to neutral."/>
+        <step id="neutral_clutch_released_again" seconds="8"
+              prompt="Leave the transmission in neutral and release the clutch."/>
+    </steps>
+</capture-script>
