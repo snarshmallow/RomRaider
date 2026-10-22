@@ -1,0 +1,81 @@
+id,name,address,type,units,expr
+# Lines starting with # are ignored; ids must be X<digits> and unique. Evidence tags live in the tuning repo.
+X900,Probe Engine Speed float,0xFF6990,float,rpm,x
+X901,Probe Vehicle Speed? float,0xFF6968,float,km/h?,x
+X902,Probe Accel Pedal? float,0xFF662C,float,?,x
+X903,Probe MAP float,0xFF64F0,float,mmHg?,x
+X904,Probe Flag 6924,0xFF6924,uint8,raw,x
+X905,Probe Flag 691D,0xFF691D,uint8,raw,x
+X906,Probe TransState 60FE,0xFF60FE,uint8,raw,x
+X907,Probe RevLimit FuelCut active,0xFF819C,uint8,raw,x
+X908,Probe RevLimit main latch,0xFF819D,uint8,raw,x
+X909,Probe RevLimit low latch,0xFF819E,uint8,raw,x
+X920,Probe Switch[0x00] @FF9E84,0xFF9E84,uint8,on/off,x
+X921,Probe Switch[0x01] @FF9E85,0xFF9E85,uint8,on/off,x
+X922,Probe Switch[0x02] @FF9E86,0xFF9E86,uint8,on/off,x
+X923,Probe Switch[0x03] @FF9E87,0xFF9E87,uint8,on/off,x
+X924,Probe Switch[0x04] @FF9E88,0xFF9E88,uint8,on/off,x
+X925,Probe Switch[0x05] @FF9E89,0xFF9E89,uint8,on/off,x
+X926,Probe Switch[0x06] @FF9E8A,0xFF9E8A,uint8,on/off,x
+X927,Probe Switch[0x07] @FF9E8B,0xFF9E8B,uint8,on/off,x
+X928,Probe Switch[0x08] @FF9E8C,0xFF9E8C,uint8,on/off,x
+X929,Probe Switch[0x09] @FF9E8D,0xFF9E8D,uint8,on/off,x
+X930,Probe Switch[0x0a] @FF9E8E,0xFF9E8E,uint8,on/off,x
+X931,Probe Switch[0x0b] @FF9E8F,0xFF9E8F,uint8,on/off,x
+X932,Probe Switch[0x0c] @FF9E90,0xFF9E90,uint8,on/off,x
+X933,Probe Switch[0x0d] @FF9E91,0xFF9E91,uint8,on/off,x
+X934,Probe Switch[0x0e] @FF9E92,0xFF9E92,uint8,on/off,x
+X935,Probe Switch[0x0f] @FF9E93,0xFF9E93,uint8,on/off,x
+X936,Probe Switch[0x10] @FF9E94,0xFF9E94,uint8,on/off,x
+X937,Probe Switch[0x11] @FF9E95,0xFF9E95,uint8,on/off,x
+X938,Probe Switch[0x12] @FF9E96,0xFF9E96,uint8,on/off,x
+X939,Probe Switch[0x13] @FF9E97,0xFF9E97,uint8,on/off,x
+X940,Probe Switch[0x14] @FF9E98,0xFF9E98,uint8,on/off,x
+X941,Probe Switch[0x15] @FF9E99,0xFF9E99,uint8,on/off,x
+X942,Probe Switch[0x16] @FF9E9A,0xFF9E9A,uint8,on/off,x
+X943,Probe Switch[0x17] @FF9E9B,0xFF9E9B,uint8,on/off,x
+X944,Probe Switch[0x18] @FF9E9C,0xFF9E9C,uint8,on/off,x
+X945,Probe Switch[0x19] @FF9E9D,0xFF9E9D,uint8,on/off,x
+X946,Probe Switch[0x1a] @FF9E9E,0xFF9E9E,uint8,on/off,x
+X947,Probe Switch[0x1b] @FF9E9F,0xFF9E9F,uint8,on/off,x
+X948,Probe Switch[0x1c] @FF9EA0,0xFF9EA0,uint8,on/off,x
+X950,Probe RAM gap @FF5400,0xFF5400,uint32,raw,x
+X951,Probe RAM gap @FF4A00,0xFF4A00,uint32,raw,x
+X952,Probe RAM gap @FF2700,0xFF2700,uint32,raw,x
+X953,Probe RAM gap @FF3E00,0xFF3E00,uint32,raw,x
+X954,Timing blend K1 (VVT active) @FF84B4,0xFF84B4,float,raw,x
+X955,Timing blend K2 (flag 8362 blend) @FF84A4,0xFF84A4,float,raw,x
+X956,Timing blend K3 (non-cruise=1) @FF9574,0xFF9574,float,raw,x
+X957,Flag FF958E (ECT comp B select / K3 enable),0xFF958E,uint8,raw,x
+X958,Flag FF8362 (K2 blend request),0xFF8362,uint8,raw,x
+X959,K2 mode byte FF84A0 (1..5),0xFF84A0,uint8,raw,x
+X960,Intake AVCS state FF9790,0xFF9790,uint8,raw,x
+X961,Exhaust AVCS state FF993C,0xFF993C,uint8,raw,x
+X962,Flag FF6530 (ECT comp secondary select),0xFF6530,uint8,raw,x
+X963,Timing final pre-filter FF849C,0xFF849C,float,raw,x
+X964,Timing filtered FF8488,0xFF8488,float,raw,x
+X965,Timing rate-limited FF8464,0xFF8464,float,raw,x
+X966,KCA max final FF8774,0xFF8774,float,raw,x
+X967,Flag FF9594 (K3 input a),0xFF9594,uint8,raw,x
+X968,Flag FF9597 (K3 input b),0xFF9597,uint8,raw,x
+X969,Flag FF6962 (0x272B6 result input),0xFF6962,uint8,raw,x
+X970,Switch[0x1D] @FF9EA1,0xFF9EA1,uint8,raw,x
+X971,Switch[0x1E] @FF9EA2,0xFF9EA2,uint8,raw,x
+X972,Switch[0x1F] @FF9EA3,0xFF9EA3,uint8,raw,x
+X973,Switch[0x20] @FF9EA4,0xFF9EA4,uint8,raw,x
+X974,Switch[0x21] @FF9EA5,0xFF9EA5,uint8,raw,x
+X975,Switch[0x22] @FF9EA6,0xFF9EA6,uint8,raw,x
+X976,Switch[0x23] @FF9EA7,0xFF9EA7,uint8,raw,x
+X977,Switch[0x24] @FF9EA8,0xFF9EA8,uint8,raw,x
+X978,Switch[0x25] @FF9EA9,0xFF9EA9,uint8,raw,x
+X979,Switch[0x26] @FF9EAA,0xFF9EAA,uint8,raw,x
+X980,Switch[0x27] @FF9EAB,0xFF9EAB,uint8,raw,x
+X981,Switch[0x28] @FF9EAC,0xFF9EAC,uint8,raw,x
+X982,Switch[0x29] @FF9EAD,0xFF9EAD,uint8,raw,x
+X983,Switch[0x2A] @FF9EAE,0xFF9EAE,uint8,raw,x
+X984,Speed raw source @FF696C (pre-validation),0xFF696C,float,raw,x
+X985,Speed-valid byte FF64DC (bit7 set -> speed forced 0.0),0xFF64DC,uint8,raw,x
+X986,Speed-substitute flag FF608C (==1 -> speed forced 10.0),0xFF608C,uint8,raw,x
+X987,Speed-substitute flag FF619C (==1 -> speed forced 10.0),0xFF619C,uint8,raw,x
+X988,Speed-substitute flag FF619E (==1 -> speed forced 10.0),0xFF619E,uint8,raw,x
+X989,Speed-valid word FF6B58 (compared >=0 at 0x273A2; cond dead on stock),0xFF6B58,uint16,raw,x
