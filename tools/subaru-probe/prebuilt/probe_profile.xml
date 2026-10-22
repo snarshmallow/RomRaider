@@ -4,8 +4,6 @@
     <parameter id="P8" livedata="selected" />
     <parameter id="P9" livedata="selected" />
     <parameter id="P13" livedata="selected" />
-    <parameter id="P12" livedata="selected" />
-    <parameter id="P2" livedata="selected" />
     <parameter id="X900" livedata="selected" />
     <parameter id="X901" livedata="selected" />
     <parameter id="X902" livedata="selected" />
@@ -85,6 +83,8 @@
     <parameter id="X987" livedata="selected" />
     <parameter id="X988" livedata="selected" />
     <parameter id="X989" livedata="selected" />
+    <parameter id="P12" livedata="selected" />
+    <parameter id="P2" livedata="selected" />
   </parameters>
   <switches>
     <switch id="S4" livedata="selected" />

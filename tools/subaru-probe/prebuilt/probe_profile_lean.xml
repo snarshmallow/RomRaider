@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="P13" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X901" livedata="selected" />
+    <parameter id="X984" livedata="selected" />
+    <parameter id="X985" livedata="selected" />
+    <parameter id="X904" livedata="selected" />
+    <parameter id="X905" livedata="selected" />
+    <parameter id="X906" livedata="selected" />
+    <parameter id="X908" livedata="selected" />
+    <parameter id="X909" livedata="selected" />
+    <parameter id="X943" livedata="selected" />
+    <parameter id="X944" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+  </switches>
+</profile>

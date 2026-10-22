@@ -1,7 +1,9 @@
 # subaru-probe: raw-RAM logging in RomRaider without hand-picking parameters
 
-Car: 2013 Impreza 2.0i, Denso SH7058, ECU ID **8424387007** (read from ROM bytes at 0xDD140; the older
-8424385107 in the tuning repo is wrong for this car, so RomRaider never offered parameters keyed to it).
+Car: 2013 Impreza 2.0i, Denso SH7058. The ROM carries ECU ID **8424387007** (bytes at 0xDD140; 8424385107 appears
+nowhere in the stock or current reads), but earlier probe logs did offer parameters keyed to 8424385107, so it is not
+settled which ID RomRaider reports. The generated definition is therefore keyed to BOTH (`--ecu-id a,b`). Note the
+ID RomRaider shows at connect in every log note.
 
 ## Use (Windows)
 1. Copy your *stock* `logger_STD_EN_v370.xml` somewhere (do not use an earlier probe file as the base).
@@ -10,7 +12,8 @@ Car: 2013 Impreza 2.0i, Denso SH7058, ECU ID **8424387007** (read from ROM bytes
    python make_probe_def.py --base "C:\path\to\logger_STD_EN_v370.xml" --params probe_params.csv --ecu-id 8424387007 --out-dir out
    ```
 3. RomRaider: Logger > Settings > Logger definition file = `out\logger_PROBE.xml`; restart the logger; connect.
-4. Logger > Profile > Load = `out\probe_profile.xml`. All probe parameters, a few standard ones
+4. Logger > Profile > Load = `out\probe_profile_lean.xml` first (18 channels, fast polling, includes X900 = RPM read
+   from RAM as a positive control that must track P8), or `out\probe_profile.xml` for everything. All probe parameters, a few standard ones
    (RPM, speed, throttle, MAF, coolant) and the standard input switches (clutch, neutral, brake, cruise buttons,
    defogger, handle, ...) are then selected. Start logging; the CSV lands in RomRaider's normal log folder.
 

@@ -3843,7 +3843,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8112587007">
                         <address length="4">0xFF3130</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF3154</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -4226,7 +4226,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="7132514007,71F2514007">
                         <address length="4">0xFF66C8</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF66D0</address>
                     </ecu>
                     <ecu id="7432744007">
@@ -5065,7 +5065,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="751B367007">
                         <address>0xFFB2F5</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFFB33D</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -5998,7 +5998,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="6C045A3007,7104584007,A62A904007,A62A907007,A62A907107">
                         <address length="4">0xFF658C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF65B0</address>
                     </ecu>
                     <ecu id="71F2514007,91243E4107">
@@ -6699,7 +6699,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF872C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF8740</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -7319,7 +7319,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF875C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF876C</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -7933,7 +7933,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF876C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF87A4</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -8714,7 +8714,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address length="4">0xFF86F4</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF873C</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -9091,7 +9091,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8112587007">
                         <address length="4">0xFF3068</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF3080</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -9567,7 +9567,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8112587007">
                         <address length="4">0xFF3070</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF3088</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -10046,7 +10046,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8112587007">
                         <address length="4">0xFF3078</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF3090</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -10522,7 +10522,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8112587007">
                         <address length="4">0xFF3080</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF3098</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -11148,7 +11148,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address length="4">0xFF7D4C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF7D54</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -11714,7 +11714,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address>0xFF8DCC</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF8E1C</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -12645,7 +12645,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="7132514007,71F2514007">
                         <address length="4">0xFF64EC</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF64F0</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -13089,7 +13089,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="7132514007,71F2514007">
                         <address length="4">0xFF64EC</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF64F0</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -13822,7 +13822,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address length="4">0xFF8454</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF8458</address>
                     </ecu>
                     <ecu id="73243C7507,8C1B345007">
@@ -14121,7 +14121,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="A62A904007,A62A907007,A62A907107">
                         <address length="4">0xFF659C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF65C0</address>
                     </ecu>
                     <ecu id="7132514007,71F2514007,91243A4107,91243E4107">
@@ -14831,7 +14831,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF800C</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF8054</address>
                     </ecu>
                     <ecu id="764B344007">
@@ -15439,7 +15439,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF8B08</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF8B10</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -16053,7 +16053,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF8B54</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF8B5C</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -17802,7 +17802,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="8C1B345007">
                         <address length="4">0xFF8240</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF824C</address>
                     </ecu>
                     <ecu id="73243C7407">
@@ -18401,7 +18401,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address>0xFF7D53</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF7D5B</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -20095,7 +20095,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address length="4">0xFF7BF0</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF7BFC</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -20616,7 +20616,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="761B347007">
                         <address length="2">0xFF70CC</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70D4</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -21098,7 +21098,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="761B347007">
                         <address length="2">0xFF70D4</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70D8</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -21613,7 +21613,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407,764B344007">
                         <address length="4">0xFF7E60</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF7E64</address>
                     </ecu>
                     <ecu id="902B374007">
@@ -22148,7 +22148,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="6202504007,6204504007">
                         <address length="2">0xFF70BA</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70DE</address>
                     </ecu>
                     <ecu id="761B347007">
@@ -22524,7 +22524,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="5B32164007,5B42164007">
                         <address>0xFF7057</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF70E9</address>
                     </ecu>
                     <ecu id="761B347007">
@@ -22987,7 +22987,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="4B04535107,5104504007,5104584007,5204504007,520450C007,5204584007,5204784007">
                         <address length="2">0xFF70AE</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70BC</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -23419,7 +23419,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="761B347007">
                         <address length="2">0xFF70B0</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70BC</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -24016,7 +24016,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7507">
                         <address length="4">0xFF68B8</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF68BC</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -24671,7 +24671,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="761B347007">
                         <address length="2">0xFF70B8</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70C4</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -25394,7 +25394,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="6202504007,6204504007">
                         <address>0xFF70E6</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF70F1</address>
                     </ecu>
                     <ecu id="761B347007">
@@ -25783,7 +25783,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="6202504007,6204504007">
                         <address>0xFF70E9</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF70F4</address>
                     </ecu>
                     <ecu id="761B347007">
@@ -26166,7 +26166,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="6202504007,6204504007">
                         <address>0xFF70EB</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF70F3</address>
                     </ecu>
                     <ecu id="761B347007">
@@ -26664,7 +26664,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="4B12148007">
                         <address length="2">0xFF70AA</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70CC</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -27953,7 +27953,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="7132514007,71F2514007">
                         <address length="4">0xFF64F0</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF64F4</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -28872,7 +28872,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address length="4">0xFF8720</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF8768</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -29478,7 +29478,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address length="4">0xFF7CD0</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF7CDC</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -30593,7 +30593,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407,761B347007">
                         <address length="4">0xFF7844</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF7848</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -31110,7 +31110,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="2F1A357206">
                         <address length="2">0xFF70CE</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="2">0xFF70D0</address>
                     </ecu>
                     <ecu id="2F1A355006">
@@ -31873,7 +31873,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7507">
                         <address length="4">0xFF6990</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address length="4">0xFF6994</address>
                     </ecu>
                     <ecu id="91243A4107,91243E4107">
@@ -32195,7 +32195,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address>0xFF86B5</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF86FD</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -32398,7 +32398,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address>0xFF86B6</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF86FE</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -32601,7 +32601,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address>0xFF86B7</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF86FF</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -32801,7 +32801,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                     <ecu id="73243C7407">
                         <address>0xFF86B8</address>
                     </ecu>
-                    <ecu id="8424387007">
+                    <ecu id="8424385107">
                         <address>0xFF8700</address>
                     </ecu>
                     <ecu id="73243C7507">
@@ -35609,7 +35609,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                         <conversion units="rawdata" expr="x" format="0" />
                     </conversions>
                 </ecuparam>
-            <ecuparam id="X900" name="Probe Engine Speed float" desc="Probe Engine Speed float" target="1"><ecu id="8424387007"><address length="4">0xFF6990</address></ecu><conversions><conversion units="rpm" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X901" name="Probe Vehicle Speed? float" desc="Probe Vehicle Speed? float" target="1"><ecu id="8424387007"><address length="4">0xFF6968</address></ecu><conversions><conversion units="km/h?" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X902" name="Probe Accel Pedal? float" desc="Probe Accel Pedal? float" target="1"><ecu id="8424387007"><address length="4">0xFF662C</address></ecu><conversions><conversion units="?" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X903" name="Probe MAP float" desc="Probe MAP float" target="1"><ecu id="8424387007"><address length="4">0xFF64F0</address></ecu><conversions><conversion units="mmHg?" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X904" name="Probe Flag 6924" desc="Probe Flag 6924" target="1"><ecu id="8424387007"><address length="1">0xFF6924</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X905" name="Probe Flag 691D" desc="Probe Flag 691D" target="1"><ecu id="8424387007"><address length="1">0xFF691D</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X906" name="Probe TransState 60FE" desc="Probe TransState 60FE" target="1"><ecu id="8424387007"><address length="1">0xFF60FE</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X907" name="Probe RevLimit FuelCut active" desc="Probe RevLimit FuelCut active" target="1"><ecu id="8424387007"><address length="1">0xFF819C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X908" name="Probe RevLimit main latch" desc="Probe RevLimit main latch" target="1"><ecu id="8424387007"><address length="1">0xFF819D</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X909" name="Probe RevLimit low latch" desc="Probe RevLimit low latch" target="1"><ecu id="8424387007"><address length="1">0xFF819E</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X920" name="Probe Switch[0x00] @FF9E84" desc="Probe Switch[0x00] @FF9E84" target="1"><ecu id="8424387007"><address length="1">0xFF9E84</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X921" name="Probe Switch[0x01] @FF9E85" desc="Probe Switch[0x01] @FF9E85" target="1"><ecu id="8424387007"><address length="1">0xFF9E85</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X922" name="Probe Switch[0x02] @FF9E86" desc="Probe Switch[0x02] @FF9E86" target="1"><ecu id="8424387007"><address length="1">0xFF9E86</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X923" name="Probe Switch[0x03] @FF9E87" desc="Probe Switch[0x03] @FF9E87" target="1"><ecu id="8424387007"><address length="1">0xFF9E87</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X924" name="Probe Switch[0x04] @FF9E88" desc="Probe Switch[0x04] @FF9E88" target="1"><ecu id="8424387007"><address length="1">0xFF9E88</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X925" name="Probe Switch[0x05] @FF9E89" desc="Probe Switch[0x05] @FF9E89" target="1"><ecu id="8424387007"><address length="1">0xFF9E89</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X926" name="Probe Switch[0x06] @FF9E8A" desc="Probe Switch[0x06] @FF9E8A" target="1"><ecu id="8424387007"><address length="1">0xFF9E8A</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X927" name="Probe Switch[0x07] @FF9E8B" desc="Probe Switch[0x07] @FF9E8B" target="1"><ecu id="8424387007"><address length="1">0xFF9E8B</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X928" name="Probe Switch[0x08] @FF9E8C" desc="Probe Switch[0x08] @FF9E8C" target="1"><ecu id="8424387007"><address length="1">0xFF9E8C</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X929" name="Probe Switch[0x09] @FF9E8D" desc="Probe Switch[0x09] @FF9E8D" target="1"><ecu id="8424387007"><address length="1">0xFF9E8D</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X930" name="Probe Switch[0x0a] @FF9E8E" desc="Probe Switch[0x0a] @FF9E8E" target="1"><ecu id="8424387007"><address length="1">0xFF9E8E</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X931" name="Probe Switch[0x0b] @FF9E8F" desc="Probe Switch[0x0b] @FF9E8F" target="1"><ecu id="8424387007"><address length="1">0xFF9E8F</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X932" name="Probe Switch[0x0c] @FF9E90" desc="Probe Switch[0x0c] @FF9E90" target="1"><ecu id="8424387007"><address length="1">0xFF9E90</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X933" name="Probe Switch[0x0d] @FF9E91" desc="Probe Switch[0x0d] @FF9E91" target="1"><ecu id="8424387007"><address length="1">0xFF9E91</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X934" name="Probe Switch[0x0e] @FF9E92" desc="Probe Switch[0x0e] @FF9E92" target="1"><ecu id="8424387007"><address length="1">0xFF9E92</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X935" name="Probe Switch[0x0f] @FF9E93" desc="Probe Switch[0x0f] @FF9E93" target="1"><ecu id="8424387007"><address length="1">0xFF9E93</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X936" name="Probe Switch[0x10] @FF9E94" desc="Probe Switch[0x10] @FF9E94" target="1"><ecu id="8424387007"><address length="1">0xFF9E94</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X937" name="Probe Switch[0x11] @FF9E95" desc="Probe Switch[0x11] @FF9E95" target="1"><ecu id="8424387007"><address length="1">0xFF9E95</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X938" name="Probe Switch[0x12] @FF9E96" desc="Probe Switch[0x12] @FF9E96" target="1"><ecu id="8424387007"><address length="1">0xFF9E96</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X939" name="Probe Switch[0x13] @FF9E97" desc="Probe Switch[0x13] @FF9E97" target="1"><ecu id="8424387007"><address length="1">0xFF9E97</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X940" name="Probe Switch[0x14] @FF9E98" desc="Probe Switch[0x14] @FF9E98" target="1"><ecu id="8424387007"><address length="1">0xFF9E98</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X941" name="Probe Switch[0x15] @FF9E99" desc="Probe Switch[0x15] @FF9E99" target="1"><ecu id="8424387007"><address length="1">0xFF9E99</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X942" name="Probe Switch[0x16] @FF9E9A" desc="Probe Switch[0x16] @FF9E9A" target="1"><ecu id="8424387007"><address length="1">0xFF9E9A</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X943" name="Probe Switch[0x17] @FF9E9B" desc="Probe Switch[0x17] @FF9E9B" target="1"><ecu id="8424387007"><address length="1">0xFF9E9B</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X944" name="Probe Switch[0x18] @FF9E9C" desc="Probe Switch[0x18] @FF9E9C" target="1"><ecu id="8424387007"><address length="1">0xFF9E9C</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X945" name="Probe Switch[0x19] @FF9E9D" desc="Probe Switch[0x19] @FF9E9D" target="1"><ecu id="8424387007"><address length="1">0xFF9E9D</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X946" name="Probe Switch[0x1a] @FF9E9E" desc="Probe Switch[0x1a] @FF9E9E" target="1"><ecu id="8424387007"><address length="1">0xFF9E9E</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X947" name="Probe Switch[0x1b] @FF9E9F" desc="Probe Switch[0x1b] @FF9E9F" target="1"><ecu id="8424387007"><address length="1">0xFF9E9F</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X948" name="Probe Switch[0x1c] @FF9EA0" desc="Probe Switch[0x1c] @FF9EA0" target="1"><ecu id="8424387007"><address length="1">0xFF9EA0</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X950" name="Probe RAM gap @FF5400" desc="Probe RAM gap @FF5400" target="1"><ecu id="8424387007"><address length="4">0xFF5400</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X951" name="Probe RAM gap @FF4A00" desc="Probe RAM gap @FF4A00" target="1"><ecu id="8424387007"><address length="4">0xFF4A00</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X952" name="Probe RAM gap @FF2700" desc="Probe RAM gap @FF2700" target="1"><ecu id="8424387007"><address length="4">0xFF2700</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X953" name="Probe RAM gap @FF3E00" desc="Probe RAM gap @FF3E00" target="1"><ecu id="8424387007"><address length="4">0xFF3E00</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X954" name="Timing blend K1 (VVT active) @FF84B4" desc="Timing blend K1 (VVT active) @FF84B4" target="1"><ecu id="8424387007"><address length="4">0xFF84B4</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X955" name="Timing blend K2 (flag 8362 blend) @FF84A4" desc="Timing blend K2 (flag 8362 blend) @FF84A4" target="1"><ecu id="8424387007"><address length="4">0xFF84A4</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X956" name="Timing blend K3 (non-cruise=1) @FF9574" desc="Timing blend K3 (non-cruise=1) @FF9574" target="1"><ecu id="8424387007"><address length="4">0xFF9574</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X957" name="Flag FF958E (ECT comp B select / K3 enable)" desc="Flag FF958E (ECT comp B select / K3 enable)" target="1"><ecu id="8424387007"><address length="1">0xFF958E</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X958" name="Flag FF8362 (K2 blend request)" desc="Flag FF8362 (K2 blend request)" target="1"><ecu id="8424387007"><address length="1">0xFF8362</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X959" name="K2 mode byte FF84A0 (1..5)" desc="K2 mode byte FF84A0 (1..5)" target="1"><ecu id="8424387007"><address length="1">0xFF84A0</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X960" name="Intake AVCS state FF9790" desc="Intake AVCS state FF9790" target="1"><ecu id="8424387007"><address length="1">0xFF9790</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X961" name="Exhaust AVCS state FF993C" desc="Exhaust AVCS state FF993C" target="1"><ecu id="8424387007"><address length="1">0xFF993C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X962" name="Flag FF6530 (ECT comp secondary select)" desc="Flag FF6530 (ECT comp secondary select)" target="1"><ecu id="8424387007"><address length="1">0xFF6530</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X963" name="Timing final pre-filter FF849C" desc="Timing final pre-filter FF849C" target="1"><ecu id="8424387007"><address length="4">0xFF849C</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X964" name="Timing filtered FF8488" desc="Timing filtered FF8488" target="1"><ecu id="8424387007"><address length="4">0xFF8488</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X965" name="Timing rate-limited FF8464" desc="Timing rate-limited FF8464" target="1"><ecu id="8424387007"><address length="4">0xFF8464</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X966" name="KCA max final FF8774" desc="KCA max final FF8774" target="1"><ecu id="8424387007"><address length="4">0xFF8774</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X967" name="Flag FF9594 (K3 input a)" desc="Flag FF9594 (K3 input a)" target="1"><ecu id="8424387007"><address length="1">0xFF9594</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X968" name="Flag FF9597 (K3 input b)" desc="Flag FF9597 (K3 input b)" target="1"><ecu id="8424387007"><address length="1">0xFF9597</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X969" name="Flag FF6962 (0x272B6 result input)" desc="Flag FF6962 (0x272B6 result input)" target="1"><ecu id="8424387007"><address length="1">0xFF6962</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X970" name="Switch[0x1D] @FF9EA1" desc="Switch[0x1D] @FF9EA1" target="1"><ecu id="8424387007"><address length="1">0xFF9EA1</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X971" name="Switch[0x1E] @FF9EA2" desc="Switch[0x1E] @FF9EA2" target="1"><ecu id="8424387007"><address length="1">0xFF9EA2</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X972" name="Switch[0x1F] @FF9EA3" desc="Switch[0x1F] @FF9EA3" target="1"><ecu id="8424387007"><address length="1">0xFF9EA3</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X973" name="Switch[0x20] @FF9EA4" desc="Switch[0x20] @FF9EA4" target="1"><ecu id="8424387007"><address length="1">0xFF9EA4</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X974" name="Switch[0x21] @FF9EA5" desc="Switch[0x21] @FF9EA5" target="1"><ecu id="8424387007"><address length="1">0xFF9EA5</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X975" name="Switch[0x22] @FF9EA6" desc="Switch[0x22] @FF9EA6" target="1"><ecu id="8424387007"><address length="1">0xFF9EA6</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X976" name="Switch[0x23] @FF9EA7" desc="Switch[0x23] @FF9EA7" target="1"><ecu id="8424387007"><address length="1">0xFF9EA7</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X977" name="Switch[0x24] @FF9EA8" desc="Switch[0x24] @FF9EA8" target="1"><ecu id="8424387007"><address length="1">0xFF9EA8</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X978" name="Switch[0x25] @FF9EA9" desc="Switch[0x25] @FF9EA9" target="1"><ecu id="8424387007"><address length="1">0xFF9EA9</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X979" name="Switch[0x26] @FF9EAA" desc="Switch[0x26] @FF9EAA" target="1"><ecu id="8424387007"><address length="1">0xFF9EAA</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X980" name="Switch[0x27] @FF9EAB" desc="Switch[0x27] @FF9EAB" target="1"><ecu id="8424387007"><address length="1">0xFF9EAB</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X981" name="Switch[0x28] @FF9EAC" desc="Switch[0x28] @FF9EAC" target="1"><ecu id="8424387007"><address length="1">0xFF9EAC</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X982" name="Switch[0x29] @FF9EAD" desc="Switch[0x29] @FF9EAD" target="1"><ecu id="8424387007"><address length="1">0xFF9EAD</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X983" name="Switch[0x2A] @FF9EAE" desc="Switch[0x2A] @FF9EAE" target="1"><ecu id="8424387007"><address length="1">0xFF9EAE</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X984" name="Speed raw source @FF696C (pre-validation)" desc="Speed raw source @FF696C (pre-validation)" target="1"><ecu id="8424387007"><address length="4">0xFF696C</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X985" name="Speed-valid byte FF64DC (bit7 set -&gt; speed forced 0.0)" desc="Speed-valid byte FF64DC (bit7 set -&gt; speed forced 0.0)" target="1"><ecu id="8424387007"><address length="1">0xFF64DC</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X986" name="Speed-substitute flag FF608C (==1 -&gt; speed forced 10.0)" desc="Speed-substitute flag FF608C (==1 -&gt; speed forced 10.0)" target="1"><ecu id="8424387007"><address length="1">0xFF608C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X987" name="Speed-substitute flag FF619C (==1 -&gt; speed forced 10.0)" desc="Speed-substitute flag FF619C (==1 -&gt; speed forced 10.0)" target="1"><ecu id="8424387007"><address length="1">0xFF619C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X988" name="Speed-substitute flag FF619E (==1 -&gt; speed forced 10.0)" desc="Speed-substitute flag FF619E (==1 -&gt; speed forced 10.0)" target="1"><ecu id="8424387007"><address length="1">0xFF619E</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X989" name="Speed-valid word FF6B58 (compared &gt;=0 at 0x273A2; cond dead on stock)" desc="Speed-valid word FF6B58 (compared &gt;=0 at 0x273A2; cond dead on stock)" target="1"><ecu id="8424387007"><address length="2">0xFF6B58</address></ecu><conversions><conversion units="raw" storagetype="uint16" expr="x" format="0" /></conversions></ecuparam></ecuparams>
+            <ecuparam id="X900" name="Probe Engine Speed float" desc="Probe Engine Speed float" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF6990</address></ecu><conversions><conversion units="rpm" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X901" name="Probe Vehicle Speed? float" desc="Probe Vehicle Speed? float" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF6968</address></ecu><conversions><conversion units="km/h?" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X902" name="Probe Accel Pedal? float" desc="Probe Accel Pedal? float" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF662C</address></ecu><conversions><conversion units="?" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X903" name="Probe MAP float" desc="Probe MAP float" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF64F0</address></ecu><conversions><conversion units="mmHg?" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X904" name="Probe Flag 6924" desc="Probe Flag 6924" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF6924</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X905" name="Probe Flag 691D" desc="Probe Flag 691D" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF691D</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X906" name="Probe TransState 60FE" desc="Probe TransState 60FE" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF60FE</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X907" name="Probe RevLimit FuelCut active" desc="Probe RevLimit FuelCut active" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF819C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X908" name="Probe RevLimit main latch" desc="Probe RevLimit main latch" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF819D</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X909" name="Probe RevLimit low latch" desc="Probe RevLimit low latch" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF819E</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X920" name="Probe Switch[0x00] @FF9E84" desc="Probe Switch[0x00] @FF9E84" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E84</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X921" name="Probe Switch[0x01] @FF9E85" desc="Probe Switch[0x01] @FF9E85" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E85</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X922" name="Probe Switch[0x02] @FF9E86" desc="Probe Switch[0x02] @FF9E86" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E86</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X923" name="Probe Switch[0x03] @FF9E87" desc="Probe Switch[0x03] @FF9E87" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E87</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X924" name="Probe Switch[0x04] @FF9E88" desc="Probe Switch[0x04] @FF9E88" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E88</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X925" name="Probe Switch[0x05] @FF9E89" desc="Probe Switch[0x05] @FF9E89" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E89</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X926" name="Probe Switch[0x06] @FF9E8A" desc="Probe Switch[0x06] @FF9E8A" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E8A</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X927" name="Probe Switch[0x07] @FF9E8B" desc="Probe Switch[0x07] @FF9E8B" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E8B</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X928" name="Probe Switch[0x08] @FF9E8C" desc="Probe Switch[0x08] @FF9E8C" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E8C</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X929" name="Probe Switch[0x09] @FF9E8D" desc="Probe Switch[0x09] @FF9E8D" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E8D</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X930" name="Probe Switch[0x0a] @FF9E8E" desc="Probe Switch[0x0a] @FF9E8E" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E8E</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X931" name="Probe Switch[0x0b] @FF9E8F" desc="Probe Switch[0x0b] @FF9E8F" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E8F</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X932" name="Probe Switch[0x0c] @FF9E90" desc="Probe Switch[0x0c] @FF9E90" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E90</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X933" name="Probe Switch[0x0d] @FF9E91" desc="Probe Switch[0x0d] @FF9E91" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E91</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X934" name="Probe Switch[0x0e] @FF9E92" desc="Probe Switch[0x0e] @FF9E92" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E92</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X935" name="Probe Switch[0x0f] @FF9E93" desc="Probe Switch[0x0f] @FF9E93" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E93</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X936" name="Probe Switch[0x10] @FF9E94" desc="Probe Switch[0x10] @FF9E94" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E94</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X937" name="Probe Switch[0x11] @FF9E95" desc="Probe Switch[0x11] @FF9E95" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E95</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X938" name="Probe Switch[0x12] @FF9E96" desc="Probe Switch[0x12] @FF9E96" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E96</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X939" name="Probe Switch[0x13] @FF9E97" desc="Probe Switch[0x13] @FF9E97" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E97</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X940" name="Probe Switch[0x14] @FF9E98" desc="Probe Switch[0x14] @FF9E98" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E98</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X941" name="Probe Switch[0x15] @FF9E99" desc="Probe Switch[0x15] @FF9E99" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E99</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X942" name="Probe Switch[0x16] @FF9E9A" desc="Probe Switch[0x16] @FF9E9A" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E9A</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X943" name="Probe Switch[0x17] @FF9E9B" desc="Probe Switch[0x17] @FF9E9B" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E9B</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X944" name="Probe Switch[0x18] @FF9E9C" desc="Probe Switch[0x18] @FF9E9C" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E9C</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X945" name="Probe Switch[0x19] @FF9E9D" desc="Probe Switch[0x19] @FF9E9D" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E9D</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X946" name="Probe Switch[0x1a] @FF9E9E" desc="Probe Switch[0x1a] @FF9E9E" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E9E</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X947" name="Probe Switch[0x1b] @FF9E9F" desc="Probe Switch[0x1b] @FF9E9F" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9E9F</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X948" name="Probe Switch[0x1c] @FF9EA0" desc="Probe Switch[0x1c] @FF9EA0" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA0</address></ecu><conversions><conversion units="on/off" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X950" name="Probe RAM gap @FF5400" desc="Probe RAM gap @FF5400" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF5400</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X951" name="Probe RAM gap @FF4A00" desc="Probe RAM gap @FF4A00" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF4A00</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X952" name="Probe RAM gap @FF2700" desc="Probe RAM gap @FF2700" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF2700</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X953" name="Probe RAM gap @FF3E00" desc="Probe RAM gap @FF3E00" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF3E00</address></ecu><conversions><conversion units="raw" storagetype="uint32" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X954" name="Timing blend K1 (VVT active) @FF84B4" desc="Timing blend K1 (VVT active) @FF84B4" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF84B4</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X955" name="Timing blend K2 (flag 8362 blend) @FF84A4" desc="Timing blend K2 (flag 8362 blend) @FF84A4" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF84A4</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X956" name="Timing blend K3 (non-cruise=1) @FF9574" desc="Timing blend K3 (non-cruise=1) @FF9574" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF9574</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X957" name="Flag FF958E (ECT comp B select / K3 enable)" desc="Flag FF958E (ECT comp B select / K3 enable)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF958E</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X958" name="Flag FF8362 (K2 blend request)" desc="Flag FF8362 (K2 blend request)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF8362</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X959" name="K2 mode byte FF84A0 (1..5)" desc="K2 mode byte FF84A0 (1..5)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF84A0</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X960" name="Intake AVCS state FF9790" desc="Intake AVCS state FF9790" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9790</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X961" name="Exhaust AVCS state FF993C" desc="Exhaust AVCS state FF993C" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF993C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X962" name="Flag FF6530 (ECT comp secondary select)" desc="Flag FF6530 (ECT comp secondary select)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF6530</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X963" name="Timing final pre-filter FF849C" desc="Timing final pre-filter FF849C" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF849C</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X964" name="Timing filtered FF8488" desc="Timing filtered FF8488" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF8488</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X965" name="Timing rate-limited FF8464" desc="Timing rate-limited FF8464" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF8464</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X966" name="KCA max final FF8774" desc="KCA max final FF8774" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF8774</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X967" name="Flag FF9594 (K3 input a)" desc="Flag FF9594 (K3 input a)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9594</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X968" name="Flag FF9597 (K3 input b)" desc="Flag FF9597 (K3 input b)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9597</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X969" name="Flag FF6962 (0x272B6 result input)" desc="Flag FF6962 (0x272B6 result input)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF6962</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X970" name="Switch[0x1D] @FF9EA1" desc="Switch[0x1D] @FF9EA1" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA1</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X971" name="Switch[0x1E] @FF9EA2" desc="Switch[0x1E] @FF9EA2" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA2</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X972" name="Switch[0x1F] @FF9EA3" desc="Switch[0x1F] @FF9EA3" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA3</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X973" name="Switch[0x20] @FF9EA4" desc="Switch[0x20] @FF9EA4" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA4</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X974" name="Switch[0x21] @FF9EA5" desc="Switch[0x21] @FF9EA5" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA5</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X975" name="Switch[0x22] @FF9EA6" desc="Switch[0x22] @FF9EA6" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA6</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X976" name="Switch[0x23] @FF9EA7" desc="Switch[0x23] @FF9EA7" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA7</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X977" name="Switch[0x24] @FF9EA8" desc="Switch[0x24] @FF9EA8" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA8</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X978" name="Switch[0x25] @FF9EA9" desc="Switch[0x25] @FF9EA9" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EA9</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X979" name="Switch[0x26] @FF9EAA" desc="Switch[0x26] @FF9EAA" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EAA</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X980" name="Switch[0x27] @FF9EAB" desc="Switch[0x27] @FF9EAB" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EAB</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X981" name="Switch[0x28] @FF9EAC" desc="Switch[0x28] @FF9EAC" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EAC</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X982" name="Switch[0x29] @FF9EAD" desc="Switch[0x29] @FF9EAD" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EAD</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X983" name="Switch[0x2A] @FF9EAE" desc="Switch[0x2A] @FF9EAE" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF9EAE</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X984" name="Speed raw source @FF696C (pre-validation)" desc="Speed raw source @FF696C (pre-validation)" target="1"><ecu id="8424387007,8424385107"><address length="4">0xFF696C</address></ecu><conversions><conversion units="raw" storagetype="float" expr="x" format="0.00" /></conversions></ecuparam><ecuparam id="X985" name="Speed-valid byte FF64DC (bit7 set -&gt; speed forced 0.0)" desc="Speed-valid byte FF64DC (bit7 set -&gt; speed forced 0.0)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF64DC</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X986" name="Speed-substitute flag FF608C (==1 -&gt; speed forced 10.0)" desc="Speed-substitute flag FF608C (==1 -&gt; speed forced 10.0)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF608C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X987" name="Speed-substitute flag FF619C (==1 -&gt; speed forced 10.0)" desc="Speed-substitute flag FF619C (==1 -&gt; speed forced 10.0)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF619C</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X988" name="Speed-substitute flag FF619E (==1 -&gt; speed forced 10.0)" desc="Speed-substitute flag FF619E (==1 -&gt; speed forced 10.0)" target="1"><ecu id="8424387007,8424385107"><address length="1">0xFF619E</address></ecu><conversions><conversion units="raw" storagetype="uint8" expr="x" format="0" /></conversions></ecuparam><ecuparam id="X989" name="Speed-valid word FF6B58 (compared &gt;=0 at 0x273A2; cond dead on stock)" desc="Speed-valid word FF6B58 (compared &gt;=0 at 0x273A2; cond dead on stock)" target="1"><ecu id="8424387007,8424385107"><address length="2">0xFF6B58</address></ecu><conversions><conversion units="raw" storagetype="uint16" expr="x" format="0" /></conversions></ecuparam></ecuparams>
         </protocol>
         <protocol id="OBD" baud="500000" databits="8" stopbits="1" parity="0" connect_timeout="2000" send_timeout="55">
             <transports>
