@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- batch G: each X1000+ byte is the RAM cell behind one SSM switch byte (ROM table 0xA1A28); 0x121 byte X1019 bit7 should follow native clutch S63. ~26 addresses. K-line only. ECU ID shown: ____ | interval: ____ ms | log: ____ -->
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X1000" livedata="selected" />
+    <parameter id="X1001" livedata="selected" />
+    <parameter id="X1002" livedata="selected" />
+    <parameter id="X1003" livedata="selected" />
+    <parameter id="X1004" livedata="selected" />
+    <parameter id="X1005" livedata="selected" />
+    <parameter id="X1006" livedata="selected" />
+    <parameter id="X1007" livedata="selected" />
+    <parameter id="X1008" livedata="selected" />
+    <parameter id="X1009" livedata="selected" />
+    <parameter id="X1010" livedata="selected" />
+    <parameter id="X1011" livedata="selected" />
+    <parameter id="X1012" livedata="selected" />
+    <parameter id="X1013" livedata="selected" />
+    <parameter id="X1014" livedata="selected" />
+    <parameter id="X1015" livedata="selected" />
+    <parameter id="X1016" livedata="selected" />
+    <parameter id="X1017" livedata="selected" />
+    <parameter id="X1018" livedata="selected" />
+    <parameter id="X1019" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+    <switch id="S65" livedata="selected" />
+    <switch id="S66" livedata="selected" />
+    <switch id="S68" livedata="selected" />
+    <switch id="S5" livedata="selected" />
+    <switch id="S10" livedata="selected" />
+    <switch id="S20" livedata="selected" />
+    <switch id="S22" livedata="selected" />
+    <switch id="S78" livedata="selected" />
+  </switches>
+</profile>

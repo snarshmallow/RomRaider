@@ -96,8 +96,8 @@ def std_ids(text, tag, names):
     return out
 
 
-def write_profile(path, params, switches):
-    prof = ['<?xml version="1.0" encoding="UTF-8"?>', '<profile protocol="SSM">', '  <parameters>']
+def write_profile(path, params, switches, comment=None):
+    prof = ['<?xml version="1.0" encoding="UTF-8"?>'] + (['<!-- %s -->' % comment] if comment else []) + ['<profile protocol="SSM">', '  <parameters>']
     prof += ['    <parameter id="%s" livedata="selected" />' % i for i in params]
     prof += ['  </parameters>', '  <switches>']
     prof += ['    <switch id="%s" livedata="selected" />' % i for i in switches]
@@ -118,14 +118,16 @@ def main():
     with open(a.base, encoding='utf-8-sig') as f:
         text = f.read()
     rows = read_params(a.params)
-    clash = [r['id'] for r in rows if re.search(r'<ecuparam id="%s"' % r['id'], text)]
-    if clash:
-        sys.exit('ids already in base file (start from the stock file, not an earlier probe def): %s' % clash)
+    # Skip ids the base already carries, so a previous probe definition can be extended in place.
+    have = {r['id'] for r in rows if re.search(r'<ecuparam id="%s"' % r['id'], text)}
+    if have:
+        print('note: %d ids already in base file, skipped' % len(have), file=sys.stderr)
+    new_rows = [r for r in rows if r['id'] not in have]
     for one in a.ecu_id.split(','):
         if one not in text:
             print('note: ECU id %s not mentioned anywhere in base file' % one, file=sys.stderr)
 
-    block = ''.join(ecuparam_xml(r, a.ecu_id) for r in rows)
+    block = ''.join(ecuparam_xml(r, a.ecu_id) for r in new_rows)
     c = ssm_ecuparams_close(text)
     out = text[:c] + block + text[c:]
 
@@ -141,7 +143,15 @@ def main():
     lean = [i for i in LEAN_X if any(r['id'] == i for r in rows)]
     write_profile(os.path.join(a.out_dir, 'probe_profile_lean.xml'), ['P8', 'P9', 'P13'] + lean,
                   std_ids(text, 'switch', LEAN_SWITCHES))
-    print('wrote %s (%d probe params, ECU id %s)' % (dpath, len(rows), a.ecu_id))
+    # batch G: the RAM bytes behind the native switch bytes (X1000+), next to the native switches they should mirror
+    g = [r['id'] for r in rows if re.fullmatch(r'X1\d{3}', r['id'])]
+    if g:
+        write_profile(os.path.join(a.out_dir, 'probe_batch_G_native_switch_bytes.xml'), ['P8', 'P9', 'X900'] + g,
+                      std_ids(text, 'switch', LEAN_SWITCHES + ['Cruise Control Set/Coast Switch',
+                              'Cruise Control Resume/Accelerate Switch', 'Cruise Control Main Toggle Switch',
+                              'Idle Switch', 'Handle Switch', 'Rear Defogger Switch', 'Light Switch', 'ABS Signal']),
+                      'batch G: each X1000+ byte is the RAM cell behind one SSM switch byte (ROM table 0xA1A28); 0x121 byte X1019 bit7 should follow native clutch S63. ~%d addresses. K-line only. ECU ID shown: ____ | interval: ____ ms | log: ____' % (len(g) + 6))
+    print('wrote %s (%d probe params added, %d in list, ECU id %s)' % (dpath, len(new_rows), len(rows), a.ecu_id))
     print('wrote %s (%d standard params, %d switches pre-selected)' % (ppath, len(sp), len(sw)))
 
 

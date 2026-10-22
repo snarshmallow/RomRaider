@@ -79,3 +79,24 @@ X986,Speed-substitute flag FF608C (==1 -> speed forced 10.0),0xFF608C,uint8,raw,
 X987,Speed-substitute flag FF619C (==1 -> speed forced 10.0),0xFF619C,uint8,raw,x
 X988,Speed-substitute flag FF619E (==1 -> speed forced 10.0),0xFF619E,uint8,raw,x
 X989,Speed-valid word FF6B58 (compared >=0 at 0x273A2; cond dead on stock),0xFF6B58,uint16,raw,x
+# --- batch G: RAM bytes behind the native SSM switch bytes, from the ROM table at 0xA1A28 (index = SSM logical address) [CAND until logged]
+X1000,Native switch byte via ROM table: SSM 0x61 (AT vehicle ID / test mode / read memory),0xFFFF9ACC,uint8,raw,x
+X1001,Native switch byte via ROM table: SSM 0x62 b7 neutral b6 idle b3 ignition b1 A/C,0xFFFF9B76,uint8,raw,x
+X1002,Native switch byte via ROM table: SSM 0x63 b7 handle b6 starter,0xFFFF9AD0,uint8,raw,x
+X1003,Native switch byte via ROM table: SSM 0x64 b5 defogger b3 light switch,0xFFFF9B78,uint8,raw,x
+X1004,Native switch byte via ROM table: SSM 0x65 b7 A/C compressor; relays,0xFFFF9AD4,uint8,raw,x
+X1005,Native switch byte via ROM table: SSM 0x66 solenoids,0xFFFF9B7A,uint8,raw,x
+X1006,Native switch byte via ROM table: SSM 0x67 valves,0xFFFF9B7C,uint8,raw,x
+X1007,Native switch byte via ROM table: SSM 0x68 torque/fuel-cut from AT,0xFFFF9B7E,uint8,raw,x
+X1008,Native switch byte via ROM table: SSM 0x69 torque control,0xFFFF9B80,uint8,raw,x
+X1009,Native switch byte via ROM table: SSM 0x6a b6 cruise b5 ABS b3 stop light,0xFFFF9AD8,uint8,raw,x
+X1010,Native switch byte via ROM table: SSM 0x6b range signals,0xFFFF9BAA,uint8,raw,x
+X1011,Native switch byte via ROM table: SSM 0x6c range/tiptronic,0xFFFF9BAB,uint8,raw,x
+X1012,Native switch byte via ROM table: SSM 0x6d shift outputs; diag lamp,0xFFFF9ADC,uint8,raw,x
+X1013,Native switch byte via ROM table: SSM 0x6e economy/P range/TCS,0xFFFF9BAC,uint8,raw,x
+X1014,Native switch byte via ROM table: SSM 0xd4 AWD / inhibitor,0xFFFF9B98,uint8,raw,x
+X1015,Native switch byte via ROM table: SSM 0xd5 fluid pressure,0xFFFF9B9A,uint8,raw,x
+X1016,Native switch byte via ROM table: SSM 0xd6 parking/diff,0xFFFF9BA3,uint8,raw,x
+X1017,Native switch byte via ROM table: SSM 0xd7 body integrated/secondary air,0xFFFF9B9C,uint8,raw,x
+X1018,Native switch byte via ROM table: SSM 0x120 b7 idle b5 injector driver relay,0xFFFF9D96,uint8,raw,x
+X1019,Native switch byte via ROM table: SSM 0x121 b7 clutch b6 stoplight b5 set b4 resume b3 brake b1 cruise main,0xFFFF9D5A,uint8,raw,x

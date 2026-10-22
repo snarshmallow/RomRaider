@@ -25,3 +25,10 @@ over the file. Addresses may be written 0xFFFF6990 or 0xFF6990. SSM is a 24-bit 
 - Read-only: this only reads RAM through the standard SSM read path RomRaider already uses.
 - Each additional parameter slows the sample rate; keep the list to what the current question needs.
 - It does not prove what a byte means. A CAND address is promoted only by a log that shows it moving as claimed.
+
+## Batch G (added 2026-10-22): the RAM behind the native switches
+`probe_params.csv` rows X1000-X1019 read the RAM byte the ECU serves for each SSM switch byte (0x61-0x6E, 0xD4-0xD7, 0x120,
+0x121), taken from the pointer table at ROM 0xA1A28 (index = SSM logical address). Load `probe_batch_G_native_switch_bytes.xml`
+next to the native clutch/neutral/brake switches: X1019 (0xFF9D5A) bit 7 should follow native clutch S63, X1001 (0xFF9B76) bit 7
+neutral S4. The script can extend an existing probe definition in place (ids already present are skipped):
+`python make_probe_def.py --base <existing logger_PROBE.xml> --out-dir out`.
