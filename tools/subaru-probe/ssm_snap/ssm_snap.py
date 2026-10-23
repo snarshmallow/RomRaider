@@ -263,23 +263,55 @@ def stable_diff(groups):
     return hits
 
 
-def cmd_diff(d):
+def baseline_diff(groups, base='up'):
+    """Per-state comparison against a baseline state. Returns rows (offset, base_value, {state: value|None}) for bytes
+    whose baseline is constant and where at least one other state is constant and different. None = unstable in that state."""
+    size = len(groups[base][0])
+    others = [s for s in groups if s != base]
+    rows = []
+    for i in range(size):
+        bv = {snap[i] for snap in groups[base]}
+        if len(bv) != 1:
+            continue
+        b = next(iter(bv))
+        vals, any_diff = {}, False
+        for s in others:
+            v = {snap[i] for snap in groups[s]}
+            if len(v) != 1:
+                vals[s] = None
+            else:
+                x = next(iter(v))
+                vals[s] = x
+                any_diff |= x != b
+        if any_diff:
+            rows.append((i, b, vals))
+    return rows
+
+
+def cmd_diff(d, base='up'):
     meta = json.load(open(os.path.join(d, 'meta.json')))
     groups = {}
     for fn in sorted(os.listdir(d)):
         if fn.startswith('snap_') and fn.endswith('.bin'):
             state = fn.split('_')[2].split('.')[0]
             groups.setdefault(state, []).append(open(os.path.join(d, fn), 'rb').read())
-    hits = stable_diff(groups)
-    print('span %06X-%06X, states %s, snapshots %s' % (meta['start'], meta['end'], list(groups),
-                                                        {s: len(v) for s, v in groups.items()}))
-    print('%d bytes are constant within each state and differ between states:' % len(hits))
-    for off, vals in hits:
-        a = meta['start'] + off
-        print('  %06X (RAM %08X): ' % (a, 0xFF000000 | a if a >= 0xFF0000 else a) +
-              '  '.join('%s=%02X' % (s, v) for s, v in vals.items()) +
-              '  xor=%02X' % (list(vals.values())[0] ^ list(vals.values())[1]))
-    return hits
+    if base not in groups:
+        sys.exit('baseline state "%s" not among %s' % (base, list(groups)))
+    rows = baseline_diff(groups, base)
+    print('span %06X-%06X, states %s, snapshots %s, baseline "%s"' % (
+        meta['start'], meta['end'], list(groups), {s: len(v) for s, v in groups.items()}, base))
+    print('%d bytes: baseline constant, at least one other state constant and different ("=" same as baseline, "~" unstable):' % len(rows))
+    for off, b, vals in rows:
+        cells = []
+        for s, v in vals.items():
+            cells.append('%s=%s' % (s, '~' if v is None else ('=' if v == b else '%02X' % v)))
+        changed = [s for s, v in vals.items() if v is not None and v != b]
+        tag = ''
+        if len(changed) == 1 and all(v is None or v == b for s, v in vals.items() if s != changed[0]):
+            x = b ^ vals[changed[0]]
+            tag = '  <- only "%s", xor=%02X%s' % (changed[0], x, ' (single bit)' if bin(x).count('1') == 1 else '')
+        print('  %06X  %s=%02X  %s%s' % (meta['start'] + off, base, b, '  '.join(cells), tag))
+    return rows
 
 
 def cmd_capture(tr, a, sub):
@@ -349,28 +381,30 @@ def cmd_selftest():
 
 
 def cmd_simulate():
-    # simulated RAM: counters drift (noise), one byte at FF9D00 follows the "clutch", one bit at FF9F10 does too
+    # simulated RAM: counters drift (noise); FF9D00 bit7 follows the clutch; FF9F10 bits 6/3 follow the brake
     state = {'s': 'up', 'tick': 0}
 
     def ram(a):
         state['tick'] += 1
         if a == 0xFF9D00:
-            return 0x80 if state['s'] == 'down' else 0x00
+            return 0x80 if state['s'] in ('clutch', 'both') else 0x00
         if a == 0xFF9F10:
-            return 0x05 | (0x40 if state['s'] == 'down' else 0)
+            return 0x10 | (0x48 if state['s'] in ('brake', 'both') else 0)
         if 0xFF9E00 <= a < 0xFF9E08:                 # free-running counters
             return state['tick'] & 0xFF
         return (a * 7) & 0xFF
 
     tr = FakeTransport(ram)
-    snaps = {'up': [], 'down': []}
-    for st in ('up', 'down', 'up', 'down'):
+    groups = {}
+    for st in ('up', 'clutch', 'up', 'clutch', 'up', 'brake', 'up', 'brake', 'both'):
         state['s'] = st
-        snaps[st].append(snapshot(tr, 0xFF9C00, 0xFFA000, 0x01))
-    hits = stable_diff(snaps)
-    found = {0xFF9C00 + o for o, _ in hits}
-    print('simulated diff found:', sorted('%06X' % a for a in found))
-    good = found == {0xFF9D00, 0xFF9F10}
+        groups.setdefault(st, []).append(snapshot(tr, 0xFF9C00, 0xFFA000, 0x01))
+    rows = baseline_diff(groups, 'up')
+    found = {0xFF9C00 + o: (b, v) for o, b, v in rows}
+    print('simulated baseline diff:', {('%06X' % a): v for a, v in sorted(found.items())})
+    good = (set(found) == {0xFF9D00, 0xFF9F10}
+            and found[0xFF9D00][1]['clutch'] == 0x80 and found[0xFF9D00][1]['brake'] == 0x00
+            and found[0xFF9F10][1]['brake'] == 0x58 and found[0xFF9F10][1]['clutch'] == 0x10)
     print('SIMULATE ' + ('OK' if good else 'FAILED'))
     return 0 if good else 1
 
@@ -400,6 +434,7 @@ def main():
     c.add_argument('--countdown', type=int, default=5, help='seconds between setting the state and starting the pass')
     d = sp.add_parser('diff')
     d.add_argument('dir')
+    d.add_argument('--base', default='up', help='baseline state name (default up)')
     a = ap.parse_args()
 
     if a.cmd == 'selftest':
@@ -407,7 +442,7 @@ def main():
     if a.cmd == 'simulate':
         return cmd_simulate()
     if a.cmd == 'diff':
-        cmd_diff(a.dir)
+        cmd_diff(a.dir, a.base)
         return 0
     sub = int(a.sub, 16)
     tr = J2534Transport(a.dll)

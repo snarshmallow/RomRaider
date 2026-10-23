@@ -35,3 +35,9 @@ single-shot A8 form (unproven on K-line); the default `01` is what RomRaider use
 request is ~200 bytes, about 415 ms on the wire at 4800 baud, and the write timeout was 100 ms. The write timeout is now wire time + 1.5 s,
 every pass starts with a line break + fresh SSM init, any failed read re-inits before retrying, and `--countdown N` (default 5) gives
 audible beeps before a pass starts and when it ends. Use `probe --n 64` to test a full-size request before capturing.
+
+## Multi-state runs (2026-10-23)
+`diff` now compares every state against a baseline (default `up`) and tags a byte "only <state>" when just that state differs, which
+separates the clutch from the brake. Example plan for the stationary pedals: `--states up,clutch,up,clutch,up,brake,up,brake,up,both`
+over a narrow span (e.g. `--start 0xFF9B00 --end 0xFF9F40`, about 14 s per pass). Bytes whose baseline or state value changes between
+repeats are dropped (counters). Run `diff <dir> --base up`.
