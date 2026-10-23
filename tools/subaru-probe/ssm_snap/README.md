@@ -18,7 +18,7 @@ py -3-32 ssm_snap.py simulate     (simulated ECU: finds the two planted bytes)
 ```
 ## Then in the car, engine idling
 ```
-py -3-32 ssm_snap.py probe        (init + read RAM RPM float @FF6990; should be ~1000 rpm)
+py -3.10-32 ssm_snap.py probe --n 64   (init + a full-size 64-byte read; RAM RPM float @FF6990 should be ~1000 rpm)
 py -3-32 ssm_snap.py capture --start 0xFF9800 --end 0xFFA000 --states up,down,up,down --out snap_clutch_1
 py -3-32 ssm_snap.py diff snap_clutch_1
 ```
@@ -29,3 +29,9 @@ with brake, handbrake and the spare toggle (use `--states off,on,off,on`).
 
 If `probe` fails with a status code or bad checksum, stop and report the message; do not retry in a loop. `--sub 00` selects the
 single-shot A8 form (unproven on K-line); the default `01` is what RomRaider uses.
+
+## Fixed 2026-10-23 after the first hardware run
+`probe` (4-byte reads) worked but `capture` failed with J2534 status 9 (ERR_TIMEOUT) on the first full-size request. Cause: a 64-address
+request is ~200 bytes, about 415 ms on the wire at 4800 baud, and the write timeout was 100 ms. The write timeout is now wire time + 1.5 s,
+every pass starts with a line break + fresh SSM init, any failed read re-inits before retrying, and `--countdown N` (default 5) gives
+audible beeps before a pass starts and when it ends. Use `probe --n 64` to test a full-size request before capturing.

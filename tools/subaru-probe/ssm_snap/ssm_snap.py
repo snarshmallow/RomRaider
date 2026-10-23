@@ -31,6 +31,11 @@ IO_START = 0xFFC000        # on-chip I/O begins above RAM; do not scan unless as
 
 
 # ---------------------------------------------------------------- frames
+def tx_time_ms(nbytes, baud=4800):
+    """Wire time of a message: 10 bits per byte (start + 8 data + stop)."""
+    return nbytes * 10.0 * 1000.0 / baud
+
+
 def cksum(b):
     return sum(b) & 0xFF
 
@@ -87,6 +92,9 @@ class FakeTransport:
     def clear_line(self):
         pass
 
+    def reinit(self):
+        return self.init()
+
     def close(self):
         pass
 
@@ -142,7 +150,9 @@ class J2534Transport:
         self._chk(L.PassThruStartMsgFilter(self.ch, self.PASS_FILTER, ctypes.byref(mask), ctypes.byref(pat), None,
                                            ctypes.byref(self.flt)), 'StartMsgFilter')
 
-    def _write(self, data, timeout_ms=100):
+    def _write(self, data, timeout_ms=None):
+        if timeout_ms is None:                # J2534 WriteMsgs blocks until the bytes are sent: allow wire time + margin
+            timeout_ms = int(tx_time_ms(len(data), self.baud)) + 1500
         m = self._msg(data)
         n = ctypes.c_ulong(1)
         self._chk(self.lib.PassThruWriteMsgs(self.ch, ctypes.byref(m), ctypes.byref(n), timeout_ms), 'WriteMsgs')
@@ -175,6 +185,12 @@ class J2534Transport:
         while self._read_for(None, 100):
             pass
 
+    def reinit(self):
+        """Line break, drain, SSM init; return the init response (caller checks the ECU id)."""
+        self.clear_line()
+        time.sleep(0.3)
+        return self.init()
+
     def close(self):
         L = self.lib
         for fn, a in ((L.PassThruStopMsgFilter, (self.ch, self.flt)), (L.PassThruDisconnect, (self.ch,)),
@@ -196,13 +212,26 @@ def read_block(tr, start, n, sub, retries=3):
             if sub == 0x01:
                 tr.clear_line()             # sub 01 streams; stop it before the next request, as RomRaider does
             return data
-        except ValueError as e:
-            tr.clear_line()
+        except (ValueError, RuntimeError) as e:
             last = e
+            try:
+                tr.reinit()
+            except Exception as e2:            # keep trying; the final error reports both
+                last = '%s; reinit also failed: %s' % (e, e2)
     raise RuntimeError('block %06X failed after %d tries: %s' % (start, retries, last))
 
 
+ECU_IDS = (bytes.fromhex('8424387007'), bytes.fromhex('8424385107'))
+
+
+def fresh_session(tr):
+    init = tr.reinit()
+    if not any(i in init for i in ECU_IDS):
+        raise RuntimeError('ECU id missing from init response (%s); K-line session not usable' % init[:12].hex().upper())
+
+
 def snapshot(tr, start, end, sub, progress=None):
+    fresh_session(tr)
     out = bytearray()
     a = start
     while a < end:
@@ -265,10 +294,16 @@ def cmd_capture(tr, a, sub):
         if not a.no_prompt:
             input('\nState "%s" (%d/%d): set it now and keep it held for the whole pass, then press Enter... ' %
                   (st, idx + 1, len(a.states)))
+        for s in range(a.countdown, 0, -1):
+            print('\r  hold "%s"; pass starts in %d s ' % (st, s), end='', flush=True)
+            print('\a', end='', flush=True)
+            time.sleep(1)
+        print('\r  PASS "%s" RUNNING - keep it held until the end beep      ' % st)
         t0 = time.time()
         data = snapshot(tr, a.start, a.end, sub,
                         progress=lambda d, t: print('\r  %5.1f%%' % (100.0 * d / t), end='', flush=True))
         counts[st] = counts.get(st, 0) + 1
+        print('\a\a', end='', flush=True)
         fn = os.path.join(a.out, 'snap_%02d_%s.bin' % (idx, st))
         open(fn, 'wb').write(data)
         print('\r  state %s: %d bytes in %.0f s -> %s' % (st, len(data), time.time() - t0, fn))
@@ -306,6 +341,9 @@ def cmd_selftest():
     except ValueError:
         check('corrupted response rejected', True)
     check('IO guard constant', IO_START == 0xFFC000)
+    need = tx_time_ms(len(read_request(range(0xFF9800, 0xFF9840))))
+    check('64-address request needs %.0f ms on the wire (the old 100 ms write timeout could not work)' % need, 400 < need < 520)
+    check('init request wire time is small (%.0f ms)' % tx_time_ms(6), tx_time_ms(6) < 20)
     print('SELFTEST ' + ('OK' if ok else 'FAILED'))
     return 0 if ok else 1
 
@@ -348,6 +386,7 @@ def main():
     sp.add_parser('simulate')
     p = sp.add_parser('probe')
     p.add_argument('--sub', default='01')
+    p.add_argument('--n', type=int, default=4, help='bytes to read from FF6990 (use 64 to test a full-size request)')
     p.add_argument('--dll', default=r'C:\Windows\SysWOW64\op20pt32.dll')
     c = sp.add_parser('capture')
     c.add_argument('--start', type=parse_addr, required=True)
@@ -358,6 +397,7 @@ def main():
     c.add_argument('--dll', default=r'C:\Windows\SysWOW64\op20pt32.dll')
     c.add_argument('--allow-io', action='store_true')
     c.add_argument('--no-prompt', action='store_true')
+    c.add_argument('--countdown', type=int, default=5, help='seconds between setting the state and starting the pass')
     d = sp.add_parser('diff')
     d.add_argument('dir')
     a = ap.parse_args()
@@ -378,9 +418,10 @@ def main():
         if bytes.fromhex('8424387007') not in init and bytes.fromhex('8424385107') not in init:
             sys.exit('ECU id not found in init response; not continuing.')
         if a.cmd == 'probe':
-            data = read_block(tr, 0xFF6990, 4, sub)
-            print('FF6990..93 = %s  -> float %.1f (RAM RPM; compare with the tach, ~1000 at idle)' %
-                  (data.hex().upper(), struct.unpack('>f', data)[0]))
+            data = read_block(tr, 0xFF6990, a.n, sub)
+            print('FF6990..%02X = %s' % (0x90 + a.n - 1, data.hex().upper()))
+            print('RAM RPM float @FF6990 = %.1f (compare with the tach, ~1000 at idle); %d-byte request OK' %
+                  (struct.unpack('>f', data[:4])[0], a.n))
             return 0
         a.states = a.states.split(',')
         if a.end > IO_START and not a.allow_io:
