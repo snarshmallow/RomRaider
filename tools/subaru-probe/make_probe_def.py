@@ -144,13 +144,22 @@ def main():
     write_profile(os.path.join(a.out_dir, 'probe_profile_lean.xml'), ['P8', 'P9', 'P13'] + lean,
                   std_ids(text, 'switch', LEAN_SWITCHES))
     # batch G: the RAM bytes behind the native switch bytes (X1000+), next to the native switches they should mirror
-    g = [r['id'] for r in rows if re.fullmatch(r'X1\d{3}', r['id'])]
+    g = [r['id'] for r in rows if re.fullmatch(r'X10\d{2}', r['id'])]
     if g:
         write_profile(os.path.join(a.out_dir, 'probe_batch_G_native_switch_bytes.xml'), ['P8', 'P9', 'X900'] + g,
                       std_ids(text, 'switch', LEAN_SWITCHES + ['Cruise Control Set/Coast Switch',
                               'Cruise Control Resume/Accelerate Switch', 'Cruise Control Main Toggle Switch',
                               'Idle Switch', 'Handle Switch', 'Rear Defogger Switch', 'Light Switch', 'ABS Signal']),
                       'batch G: each X1000+ byte is the RAM cell behind one SSM switch byte (ROM table 0xA1A28); 0x121 byte X1019 bit7 should follow native clutch S63. ~%d addresses. K-line only. ECU ID shown: ____ | interval: ____ ms | log: ____' % (len(g) + 6))
+    # batch GH: G plus H (table validation) in one stationary run; native switches and P2/P7/P8/P9/P13 give the ground truth
+    # the u8 reads at table[0x0B,0x0E,0x0F,0x11,0x12,0x13] duplicate the typed reads X1114-X1119; leave them out of the profile
+    dup = {'X1103', 'X1106', 'X1107', 'X1109', 'X1110', 'X1111'}
+    h = [r['id'] for r in rows if re.fullmatch(r'X11\d{2}', r['id']) and r['id'] not in dup]
+    if g and h:
+        write_profile(os.path.join(a.out_dir, 'probe_batch_GH_table_check.xml'), ['P2', 'P7', 'P8', 'P9', 'P13', 'X900'] + g + h,
+                      std_ids(text, 'switch', LEAN_SWITCHES + ['Cruise Control Set/Coast Switch',
+                              'Cruise Control Resume/Accelerate Switch', 'Cruise Control Main Toggle Switch', 'Idle Switch']),
+                      'batch GH: G (X1000+ switch-byte RAM) plus H (X1100+ table cells behind standard P2/P7/P8/P9/P13). ~%d RAM addresses + 5 standard + 8 switches; stays under the 68-address K-line limit. K-line, fastpoll=true. ECU ID shown: ____ | interval: ____ ms | log: ____' % (len(g) + len(h) + 4 + 6))
     print('wrote %s (%d probe params added, %d in list, ECU id %s)' % (dpath, len(new_rows), len(rows), a.ecu_id))
     print('wrote %s (%d standard params, %d switches pre-selected)' % (ppath, len(sp), len(sw)))
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- batch GH: G (X1000+ switch-byte RAM) plus H (X1100+ table cells behind standard P2/P7/P8/P9/P13). ~44 RAM addresses + 5 standard + 8 switches; stays under the 68-address K-line limit. K-line, fastpoll=true. ECU ID shown: ____ | interval: ____ ms | log: ____ -->
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P2" livedata="selected" />
+    <parameter id="P7" livedata="selected" />
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="P13" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X1000" livedata="selected" />
+    <parameter id="X1001" livedata="selected" />
+    <parameter id="X1002" livedata="selected" />
+    <parameter id="X1003" livedata="selected" />
+    <parameter id="X1004" livedata="selected" />
+    <parameter id="X1005" livedata="selected" />
+    <parameter id="X1006" livedata="selected" />
+    <parameter id="X1007" livedata="selected" />
+    <parameter id="X1008" livedata="selected" />
+    <parameter id="X1009" livedata="selected" />
+    <parameter id="X1010" livedata="selected" />
+    <parameter id="X1011" livedata="selected" />
+    <parameter id="X1012" livedata="selected" />
+    <parameter id="X1013" livedata="selected" />
+    <parameter id="X1014" livedata="selected" />
+    <parameter id="X1015" livedata="selected" />
+    <parameter id="X1016" livedata="selected" />
+    <parameter id="X1017" livedata="selected" />
+    <parameter id="X1018" livedata="selected" />
+    <parameter id="X1019" livedata="selected" />
+    <parameter id="X1100" livedata="selected" />
+    <parameter id="X1101" livedata="selected" />
+    <parameter id="X1102" livedata="selected" />
+    <parameter id="X1104" livedata="selected" />
+    <parameter id="X1105" livedata="selected" />
+    <parameter id="X1108" livedata="selected" />
+    <parameter id="X1112" livedata="selected" />
+    <parameter id="X1113" livedata="selected" />
+    <parameter id="X1114" livedata="selected" />
+    <parameter id="X1115" livedata="selected" />
+    <parameter id="X1116" livedata="selected" />
+    <parameter id="X1117" livedata="selected" />
+    <parameter id="X1118" livedata="selected" />
+    <parameter id="X1119" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+    <switch id="S65" livedata="selected" />
+    <switch id="S66" livedata="selected" />
+    <switch id="S68" livedata="selected" />
+    <switch id="S5" livedata="selected" />
+  </switches>
+</profile>

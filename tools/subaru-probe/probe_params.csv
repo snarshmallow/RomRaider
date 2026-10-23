@@ -100,3 +100,24 @@ X1016,Native switch byte via ROM table: SSM 0xd6 parking/diff,0xFFFF9BA3,uint8,r
 X1017,Native switch byte via ROM table: SSM 0xd7 body integrated/secondary air,0xFFFF9B9C,uint8,raw,x
 X1018,Native switch byte via ROM table: SSM 0x120 b7 idle b5 injector driver relay,0xFFFF9D96,uint8,raw,x
 X1019,Native switch byte via ROM table: SSM 0x121 b7 clutch b6 stoplight b5 set b4 resume b3 brake b1 cruise main,0xFFFF9D5A,uint8,raw,x
+# --- batch H: do the ROM-table RAM cells behind standard SSM parameters track the standard values? (validates the table at 0xA1A28) [CAND]
+X1100,Table check: SSM 0x08 (coolant P2) via ROM table byte,0xFFFF360A,uint8,raw,x
+X1101,Table check: SSM 0x09 (SSM 0x09) via ROM table byte,0xFFFF9396,uint8,raw,x
+X1102,Table check: SSM 0x0A (SSM 0x0A) via ROM table byte,0xFFFF9384,uint8,raw,x
+X1103,Table check: SSM 0x0B (SSM 0x0B) via ROM table byte,0xFFFF9378,uint8,raw,x
+X1104,Table check: SSM 0x0C (SSM 0x0C) via ROM table byte,0xFFFF9397,uint8,raw,x
+X1105,Table check: SSM 0x0D (MAP P7) via ROM table byte,0xFFFF938A,uint8,raw,x
+X1106,Table check: SSM 0x0E (RPM hi P8) via ROM table byte,0xFFFF937C,uint8,raw,x
+X1107,Table check: SSM 0x0F (RPM lo P8) via ROM table byte,0xFFFF93AA,uint8,raw,x
+X1108,Table check: SSM 0x10 (vehicle speed P9) via ROM table byte,0xFFFF938C,uint8,raw,x
+X1109,Table check: SSM 0x11 (SSM 0x11) via ROM table byte,0xFFFF9388,uint8,raw,x
+X1110,Table check: SSM 0x12 (IAT P11) via ROM table byte,0xFFFFB0F8,uint8,raw,x
+X1111,Table check: SSM 0x13 (MAF P12) via ROM table byte,0xFFFF9380,uint8,raw,x
+X1112,Table check: SSM 0x14 (SSM 0x14) via ROM table byte,0xFFFF3620,uint8,raw,x
+X1113,Table check: SSM 0x15 (throttle P13) via ROM table byte,0xFFFF362A,uint8,raw,x
+X1114,Table check: float at table[0x0E] 0xFFFF937C (code reads it as float),0xFFFF937C,float,raw,x
+X1115,Table check: u16 at table[0x0F] 0xFFFF93AA (code reads mov.w),0xFFFF93AA,uint16,raw,x
+X1116,Table check: u16 at table[0x11] 0xFFFF9388 (code reads mov.w),0xFFFF9388,uint16,raw,x
+X1117,Table check: float at table[0x0B] 0xFFFF9378 (code reads fmov),0xFFFF9378,float,raw,x
+X1118,Table check: float at table[0x13] 0xFFFF9380 (code reads fmov),0xFFFF9380,float,raw,x
+X1119,Table check: float at table[0x12] 0xFFFFB0F8 (code reads fmov),0xFFFFB0F8,float,raw,x
