@@ -31,3 +31,9 @@ Rows X1000-X1019 and X1100-X1119 in probe_params.csv were chosen from ROM 0xA1A2
 routine at ~0xA1960, so those cells are not the SSM switch/standard bytes. A Fast-K run with native ground truth confirmed it (RAM cells stayed 0 while the
 native clutch, brake and neutral bits moved). Keep the rows only as history; do not read meaning into them. The script's in-place extension still works
 (`python make_probe_def.py --base <existing logger_PROBE.xml> --out-dir out` skips ids already present).
+
+## Batch R (2026-10-23): the real RAM flags behind the native bits
+The Ghidra pass (cloud/arcturus-ghidra) found the SSM A8 handler: logical addresses < 0x350 call getter routines from the table at ROM
+0x6DD68; the getter for 0x121 (0x6399A, re-read by me) packs bytes from RAM: clutch 0xFFFF692F, stop lamp 6239, set 6236, resume 6237, brake 6238,
+main 6235, status 623C; getter 0x62EF4 packs neutral 6908 and others; cancel is 6249. Batch R (X1200-X1224) reads those cells next to the native bits.
+`probe_batch_R_input_flags.xml` selects them together with the native switches; every value should match its native bit (1 = pressed).

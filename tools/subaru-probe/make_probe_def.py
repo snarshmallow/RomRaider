@@ -160,6 +160,14 @@ def main():
                       std_ids(text, 'switch', LEAN_SWITCHES + ['Cruise Control Set/Coast Switch',
                               'Cruise Control Resume/Accelerate Switch', 'Cruise Control Main Toggle Switch', 'Idle Switch']),
                       'batch GH: G (X1000+ switch-byte RAM) plus H (X1100+ table cells behind standard P2/P7/P8/P9/P13). ~%d RAM addresses + 5 standard + 8 switches; stays under the 68-address K-line limit. K-line, fastpoll=true. ECU ID shown: ____ | interval: ____ ms | log: ____' % (len(g) + len(h) + 4 + 6))
+    # batch R: the RAM flags behind the native clutch/neutral/brake/cruise bits, next to those native bits
+    r = [x['id'] for x in rows if re.fullmatch(r'X12\d{2}', x['id'])]
+    if r:
+        write_profile(os.path.join(a.out_dir, 'probe_batch_R_input_flags.xml'), ['P8', 'P9', 'X900'] + r,
+                      std_ids(text, 'switch', LEAN_SWITCHES + ['Cruise Control Set/Coast Switch',
+                              'Cruise Control Resume/Accelerate Switch', 'Cruise Control Main Toggle Switch',
+                              'Cruise Control Cancel Switch', 'Idle Switch']),
+                      'batch R: RAM flags behind the native SSM switch bits (clutch 692F, neutral 6908, brake 6238, stop 6239, cruise 6235-6237/623C/6249) plus port images and limiter/gate flags. ~%d RAM addresses; K-line, fastpoll=true; untick/retick P8/P9/switches after connect. ECU ID shown: ____ | interval: ____ ms | log: ____' % (len(r) + 5))
     print('wrote %s (%d probe params added, %d in list, ECU id %s)' % (dpath, len(new_rows), len(rows), a.ecu_id))
     print('wrote %s (%d standard params, %d switches pre-selected)' % (ppath, len(sp), len(sw)))
 

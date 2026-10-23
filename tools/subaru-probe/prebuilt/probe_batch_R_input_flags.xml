@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- batch R: RAM flags behind the native SSM switch bits (clutch 692F, neutral 6908, brake 6238, stop 6239, cruise 6235-6237/623C/6249) plus port images and limiter/gate flags. ~30 RAM addresses; K-line, fastpoll=true; untick/retick P8/P9/switches after connect. ECU ID shown: ____ | interval: ____ ms | log: ____ -->
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X1200" livedata="selected" />
+    <parameter id="X1201" livedata="selected" />
+    <parameter id="X1202" livedata="selected" />
+    <parameter id="X1203" livedata="selected" />
+    <parameter id="X1204" livedata="selected" />
+    <parameter id="X1205" livedata="selected" />
+    <parameter id="X1206" livedata="selected" />
+    <parameter id="X1207" livedata="selected" />
+    <parameter id="X1208" livedata="selected" />
+    <parameter id="X1209" livedata="selected" />
+    <parameter id="X1210" livedata="selected" />
+    <parameter id="X1211" livedata="selected" />
+    <parameter id="X1212" livedata="selected" />
+    <parameter id="X1213" livedata="selected" />
+    <parameter id="X1214" livedata="selected" />
+    <parameter id="X1215" livedata="selected" />
+    <parameter id="X1216" livedata="selected" />
+    <parameter id="X1217" livedata="selected" />
+    <parameter id="X1218" livedata="selected" />
+    <parameter id="X1219" livedata="selected" />
+    <parameter id="X1220" livedata="selected" />
+    <parameter id="X1221" livedata="selected" />
+    <parameter id="X1222" livedata="selected" />
+    <parameter id="X1223" livedata="selected" />
+    <parameter id="X1224" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+    <switch id="S65" livedata="selected" />
+    <switch id="S66" livedata="selected" />
+    <switch id="S68" livedata="selected" />
+    <switch id="S154" livedata="selected" />
+    <switch id="S5" livedata="selected" />
+  </switches>
+</profile>

@@ -121,3 +121,29 @@ X1116,Table check: u16 at table[0x11] 0xFFFF9388 (code reads mov.w),0xFFFF9388,u
 X1117,Table check: float at table[0x0B] 0xFFFF9378 (code reads fmov),0xFFFF9378,float,raw,x
 X1118,Table check: float at table[0x13] 0xFFFF9380 (code reads fmov),0xFFFF9380,float,raw,x
 X1119,Table check: float at table[0x12] 0xFFFFB0F8 (code reads fmov),0xFFFFB0F8,float,raw,x
+# --- batch R: the RAM flags behind the native SSM bits, from the Ghidra pass (analysis/ghidra on cloud/arcturus-ghidra) and my re-read of getters 0x6399A / 0x62EF4. Tags in the name; log before using.
+X1200,Clutch flag 692F (1=pressed) [CODE 0x6399A getter b7],0x00FF692F,uint8,raw,x
+X1201,Neutral flag 6908 (1=neutral) [CODE 0x62EF4 getter b7],0x00FF6908,uint8,raw,x
+X1202,Brake flag 6238 [CODE getter 0x121 b3],0x00FF6238,uint8,raw,x
+X1203,Stop lamp flag 6239 [CODE getter 0x121 b6],0x00FF6239,uint8,raw,x
+X1204,Cruise main flag 6235 [CODE getter 0x121 b1],0x00FF6235,uint8,raw,x
+X1205,Cruise set flag 6236 [CODE getter 0x121 b5],0x00FF6236,uint8,raw,x
+X1206,Cruise resume flag 6237 [CODE getter 0x121 b4],0x00FF6237,uint8,raw,x
+X1207,Cruise status flag 623C [CODE getter 0x121 b0],0x00FF623C,uint8,raw,x
+X1208,Cruise cancel flag 6249 [CODE getter 0xD7 b0],0x00FF6249,uint8,raw,x
+X1209,Port image word 4440 (clutch b3 neutral b4 main b2 brake b1 inverted) [CAND],0x00FF4440,uint16,raw,x
+X1210,Port image byte 4446 (stop lamp b0) [CAND],0x00FF4446,uint8,raw,x
+X1211,ADC ladder class image 4448 (set b1 resume b3 cancel b0) [CAND],0x00FF4448,uint8,raw,x
+X1212,Limiter flag 6924 (ROM C36A8 != AA) [CODE writer 0x26A18],0x00FF6924,uint8,raw,x
+X1213,Limiter flag 691D (=6908==1) [CODE writer 0x26DAA],0x00FF691D,uint8,raw,x
+X1214,Copy of 6924 at 690E [CODE],0x00FF690E,uint8,raw,x
+X1215,SSM 0x62 b5 source 692D [CODE],0x00FF692D,uint8,raw,x
+X1216,SSM 0x62 b4 source 6917 [CODE],0x00FF6917,uint8,raw,x
+X1217,SSM 0x62 b3 source 6905 [CODE],0x00FF6905,uint8,raw,x
+X1218,SSM 0x62 b2 source 6907 [CODE],0x00FF6907,uint8,raw,x
+X1219,SSM 0x62 b1 source 6923 [CODE],0x00FF6923,uint8,raw,x
+X1220,SSM 0x62 b6 source 8C36 [CODE],0x00FF8C36,uint8,raw,x
+X1221,Gear/driveline nibble source 610C [CODE],0x00FF610C,uint8,raw,x
+X1222,610C source 60D7 [CODE],0x00FF60D7,uint8,raw,x
+X1223,Switch gate byte B10C [CODE],0x00FFB10C,uint8,raw,x
+X1224,Switch gate byte 3670 (FF/A5) [CODE],0x00FF3670,uint8,raw,x
