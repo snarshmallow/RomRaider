@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- batch L_lc_state. K-line, fastpoll=true. READ ONLY. ECU ID shown: ____ | interval: ____ ms | log: ____ -->
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X1300" livedata="selected" />
+    <parameter id="X1301" livedata="selected" />
+    <parameter id="X1302" livedata="selected" />
+    <parameter id="X1303" livedata="selected" />
+    <parameter id="X1304" livedata="selected" />
+    <parameter id="X1305" livedata="selected" />
+    <parameter id="X1306" livedata="selected" />
+    <parameter id="X1223" livedata="selected" />
+    <parameter id="X1200" livedata="selected" />
+    <parameter id="X1201" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+    <switch id="S154" livedata="selected" />
+    <switch id="S5" livedata="selected" />
+  </switches>
+</profile>

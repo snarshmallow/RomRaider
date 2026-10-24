@@ -147,3 +147,21 @@ X1221,Gear/driveline nibble source 610C [CODE],0x00FF610C,uint8,raw,x
 X1222,610C source 60D7 [CODE],0x00FF60D7,uint8,raw,x
 X1223,Switch gate byte B10C [CODE],0x00FFB10C,uint8,raw,x
 X1224,Switch gate byte 3670 (FF/A5) [CODE],0x00FF3670,uint8,raw,x
+# --- batch L: launch control v1 state (only meaningful on an image built from analysis/cloud/lc_v1.s); batch M: lamp cells from the T54 MIL analysis. READ ONLY. The A5ED/3668/B10C cells must never be written.
+X1300,LC state magic1 @FF3E80 (0x3D) [new; launch control v1],0x00FF3E80,uint8,raw,x
+X1301,LC state magic2 @FF3E81 (0xC7),0x00FF3E81,uint8,raw,x
+X1302,LC state armed @FF3E82 (1 = armed),0x00FF3E82,uint8,raw,x
+X1303,LC prev_cancel @FF3E83,0x00FF3E83,uint8,raw,x
+X1304,LC hold counter @FF3E84,0x00FF3E84,uint32,raw,x
+X1305,LC idle timer @FF3E88,0x00FF3E88,uint32,raw,x
+X1306,LC call counter @FF3E8C (diag image: +1 per limiter-task call),0x00FF3E8C,uint32,raw,x
+X1310,MIL block B110 [CAND; T54],0x00FFB110,uint8,raw,x
+X1311,MIL phase B112 [CAND; T54],0x00FFB112,uint8,raw,x
+X1312,MIL lamp mode B113 (0 off 1 solid 2 fast 3 cal 4 slow) [CAND; T54],0x00FFB113,uint8,raw,x
+X1313,MIL related 5F5E [CAND; T54],0x00FF5F5E,uint8,raw,x
+X1314,MIL related 5E1D [CAND; T54],0x00FF5E1D,uint8,raw,x
+X1315,Port F754 (lamp pin bit7 CAND; T54),0x00FFF754,uint8,raw,x
+X1316,MIL related 6962 [CAND; T54],0x00FF6962,uint8,raw,x
+X1317,MIL related 935C [CAND; T54],0x00FF935C,uint8,raw,x
+X1318,MIL related A5ED (do not write) [CAND; T54],0x00FFA5ED,uint8,raw,x
+X1319,MIL related 3668 (do not write) [CAND; T54],0x00FF3668,uint8,raw,x

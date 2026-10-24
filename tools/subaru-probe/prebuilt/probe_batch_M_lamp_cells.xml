@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- batch M_lamp_cells. K-line, fastpoll=true. READ ONLY. ECU ID shown: ____ | interval: ____ ms | log: ____ -->
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X1310" livedata="selected" />
+    <parameter id="X1311" livedata="selected" />
+    <parameter id="X1312" livedata="selected" />
+    <parameter id="X1313" livedata="selected" />
+    <parameter id="X1314" livedata="selected" />
+    <parameter id="X1315" livedata="selected" />
+    <parameter id="X1316" livedata="selected" />
+    <parameter id="X1317" livedata="selected" />
+    <parameter id="X1318" livedata="selected" />
+    <parameter id="X1319" livedata="selected" />
+    <parameter id="X1223" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+    <switch id="S154" livedata="selected" />
+    <switch id="S5" livedata="selected" />
+  </switches>
+</profile>
