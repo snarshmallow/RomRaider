@@ -41,3 +41,8 @@ audible beeps before a pass starts and when it ends. Use `probe --n 64` to test 
 separates the clutch from the brake. Example plan for the stationary pedals: `--states up,clutch,up,clutch,up,brake,up,brake,up,both`
 over a narrow span (e.g. `--start 0xFF9B00 --end 0xFF9F40`, about 14 s per pass). Bytes whose baseline or state value changes between
 repeats are dropped (counters). Run `diff <dir> --base up`.
+
+## Quiet-window check (2026-10-24)
+`ssm_snap.py changed DIR` lists every byte that differs between any two snapshots of a capture. Use it on a RAM window that should be unused
+(e.g. before putting launch-control state there): `capture --start 0xFF3E00 --end 0xFF4000 --states a,b,c,d,e,f --no-prompt --countdown 0 --out quiet_1`,
+repeating the passes at different engine states (cold idle, warm idle, 2500 rpm hold, a brief 4000 rpm blip), then `changed quiet_1`.

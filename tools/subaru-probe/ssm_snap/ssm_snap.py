@@ -314,6 +314,21 @@ def cmd_diff(d, base='up'):
     return rows
 
 
+def cmd_changed(d):
+    """List every byte that is not identical in all snapshots of a capture dir (use on a window that should be unused)."""
+    meta = json.load(open(os.path.join(d, 'meta.json')))
+    snaps = [open(os.path.join(d, f), 'rb').read() for f in sorted(os.listdir(d)) if f.startswith('snap_') and f.endswith('.bin')]
+    if len(snaps) < 2:
+        sys.exit('need at least two snapshots')
+    ch = [i for i in range(len(snaps[0])) if len({s[i] for s in snaps}) > 1]
+    print('span %06X-%06X, %d snapshots: %d bytes changed between snapshots' % (meta['start'], meta['end'], len(snaps), len(ch)))
+    for i in ch:
+        print('  %06X  %s' % (meta['start'] + i, ' '.join('%02X' % s[i] for s in snaps)))
+    nz = [i for i in range(len(snaps[0])) if any(s[i] for s in snaps)]
+    print('%d bytes are non-zero in at least one snapshot%s' % (len(nz), ': ' + ' '.join('%06X' % (meta['start'] + i) for i in nz[:40]) if nz else ''))
+    return ch
+
+
 def cmd_capture(tr, a, sub):
     os.makedirs(a.out, exist_ok=True)
     meta = dict(start=a.start, end=a.end, states=a.states, sub=sub, block=BLOCK, taken=time.strftime('%F %T'))
@@ -432,6 +447,8 @@ def main():
     c.add_argument('--allow-io', action='store_true')
     c.add_argument('--no-prompt', action='store_true')
     c.add_argument('--countdown', type=int, default=5, help='seconds between setting the state and starting the pass')
+    ch = sp.add_parser('changed')
+    ch.add_argument('dir')
     d = sp.add_parser('diff')
     d.add_argument('dir')
     d.add_argument('--base', default='up', help='baseline state name (default up)')
@@ -441,6 +458,9 @@ def main():
         return cmd_selftest()
     if a.cmd == 'simulate':
         return cmd_simulate()
+    if a.cmd == 'changed':
+        cmd_changed(a.dir)
+        return 0
     if a.cmd == 'diff':
         cmd_diff(a.dir, a.base)
         return 0
