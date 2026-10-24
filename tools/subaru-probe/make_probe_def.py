@@ -169,7 +169,7 @@ def main():
                               'Cruise Control Cancel Switch', 'Idle Switch']),
                       'batch R: RAM flags behind the native SSM switch bits (clutch 692F, neutral 6908, brake 6238, stop 6239, cruise 6235-6237/623C/6249) plus port images and limiter/gate flags. ~%d RAM addresses; K-line, fastpoll=true; untick/retick P8/P9/switches after connect. ECU ID shown: ____ | interval: ____ ms | log: ____' % (len(r) + 5))
     # batch L: launch-control state; batch M: check-engine-lamp cells (read-only)
-    for tag, pat, extra in (('L_lc_state', r'X130\d', ['X1223', 'X1200', 'X1201']), ('M_lamp_cells', r'X131\d', ['X1223'])):
+    for tag, pat, extra in (('L_lc_state', r'X130\d', ['X1223', 'X1200', 'X1201']), ('M_lamp_cells', r'X131\d', ['X1223']), ('N_cruise_ladder', r'X132\d', ['X1208', 'X1204', 'X1205', 'X1206', 'X1209'])):
         ids = [x['id'] for x in rows if re.fullmatch(pat, x['id'])]
         if ids:
             write_profile(os.path.join(a.out_dir, 'probe_batch_%s.xml' % tag), ['P8', 'P9', 'X900'] + ids + [e for e in extra if any(x['id'] == e for x in rows)],

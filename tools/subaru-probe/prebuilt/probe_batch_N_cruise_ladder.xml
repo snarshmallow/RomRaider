@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- batch N_cruise_ladder. K-line, fastpoll=true. READ ONLY. ECU ID shown: ____ | interval: ____ ms | log: ____ -->
+<profile protocol="SSM">
+  <parameters>
+    <parameter id="P8" livedata="selected" />
+    <parameter id="P9" livedata="selected" />
+    <parameter id="X900" livedata="selected" />
+    <parameter id="X1320" livedata="selected" />
+    <parameter id="X1321" livedata="selected" />
+    <parameter id="X1208" livedata="selected" />
+    <parameter id="X1204" livedata="selected" />
+    <parameter id="X1205" livedata="selected" />
+    <parameter id="X1206" livedata="selected" />
+    <parameter id="X1209" livedata="selected" />
+  </parameters>
+  <switches>
+    <switch id="S4" livedata="selected" />
+    <switch id="S63" livedata="selected" />
+    <switch id="S67" livedata="selected" />
+    <switch id="S64" livedata="selected" />
+    <switch id="S154" livedata="selected" />
+    <switch id="S5" livedata="selected" />
+  </switches>
+</profile>

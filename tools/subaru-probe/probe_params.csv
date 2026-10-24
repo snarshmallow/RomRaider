@@ -165,3 +165,6 @@ X1316,MIL related 6962 [CAND; T54],0x00FF6962,uint8,raw,x
 X1317,MIL related 935C [CAND; T54],0x00FF935C,uint8,raw,x
 X1318,MIL related A5ED (do not write) [CAND; T54],0x00FFA5ED,uint8,raw,x
 X1319,MIL related 3668 (do not write) [CAND; T54],0x00FF3668,uint8,raw,x
+# --- correction 2026-10-24: X1211 read 0xFF4448 as ONE byte = the HIGH byte of a big-endian 16-bit word, so it stayed 0. The cruise ladder word is read with mov.w; its bits 0-4 are in the LOW byte 0xFF4449.
+X1320,Cruise ladder word 4448 (uint16; b0 cancel b1 set b3 resume) [CAND],0xFFFF4448,uint16,raw,x
+X1321,Cruise ladder low byte 4449 [CAND],0xFFFF4449,uint8,raw,x
